@@ -43,5 +43,5 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ## ZERO to Cloud Native Index
 [Part 1 - Introduction and Overview ](docs/zero-to-cloud-native-part1-introduction.pdf)  
-[Part 2 - Introduction and Overview ](docs/zero-to-cloud-native-part2-microservices-design.pdf)  
-[Part 3 - Introduction and Overview ](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)
+[Part 2 - Microservices Architecture and Design ](docs/zero-to-cloud-native-part2-microservices-design.pdf)  
+[Part 3 - Network and Security Configuration ](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)
