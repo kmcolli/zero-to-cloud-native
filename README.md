@@ -49,7 +49,9 @@ To support these APIs, the following microservices, all written in Python, will 
 [Part 5 - IBM Cloud Databases and Messaging ](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
 [Part 6 - Setting up a Cloud-Native Development Environment ](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
 [Part 7 - Preparing to Deploy ](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
-[Part 8 - Cloning and Importing the Code Base ](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)
+[Part 8 - Cloning and Importing the Code Base ](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
+[Part 9 - Deploying the Application ](docs/zero-to-cloud-native-part9-deploying the application.pdf)  
+[Part 9A - Deploying with a 'Classic' Pipeline ](docs/zero-to-cloud-native-part9A-creating-classic-toolchains.pdf)
 
 
 
