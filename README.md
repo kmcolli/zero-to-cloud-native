@@ -42,16 +42,55 @@ To support these APIs, the following microservices, all written in Python, will 
 * **getOCPToken.py** – implementation of the real-time getOCPToken API.  * **enableNodeSSH.py** – implementation of the ‘long’ running enableNodeSSH API
 
 ## ZERO to Cloud Native Index
-[Part 1 - Introduction and Overview ](docs/zero-to-cloud-native-part1-introduction.pdf)  
-[Part 2 - Microservices Architecture and Design ](docs/zero-to-cloud-native-part2-microservices-design.pdf)  
-[Part 3 - Network and Security Configuration ](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
-[Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration ](docs/zero-to-cloud-native-part4-openshift.pdf)  
-[Part 5 - IBM Cloud Databases and Messaging ](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
-[Part 6 - Setting up a Cloud-Native Development Environment ](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
-[Part 7 - Preparing to Deploy ](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
-[Part 8 - Cloning and Importing the Code Base ](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
-[Part 9 - Deploying the Application ](docs/zero-to-cloud-native-part9-deploying the application.pdf)  
-[Part 9A - Deploying with a 'Classic' Pipeline ](docs/zero-to-cloud-native-part9A-creating-classic-toolchains.pdf)
+**Part 1 Introduction and Overview**  
+[Blog ](docs/zero-to-cloud-native-part1-introduction.pdf)    
+[Video](<https://youtu.be/Eta09EJ5bvY>)  
+[Presentation ](docs/ZeroToCloudNative-1-Introduction.pdf)  
+
+**Part 2 Microservices Architecture and Design**  
+[Blog ](docs/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
+[Video](<https://youtu.be/UGyIlZfHYok)  
+[Presentation ](docs/ZeroToCloudNative-2-microservices.pdf)  
+
+**Part 3 - Network and Security Configuration**  
+
+[Blog](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
+
+**Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
+[Blog](docs/zero-to-cloud-native-part4-openshift.pdf)  
+
+**Part 5 - IBM Cloud Databases and Messaging**  
+[Blog](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
+
+**Part 6 - Setting up a Cloud-Native Development Environment**  
+[Blog](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
+
+**Part 7 - Preparing to Deploy**  
+[Blog](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
+
+**Part 8 - Cloning and Importing the Code Base**    
+[Blog](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
+
+**Part 9 - Deploying the Application**  
+[Blog](docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
+
+**Part 9A - Deploying with a 'Classic' Pipeline**  
+[Blog](docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
+
+**Part 9B - Deploying with a Tekton Pipeline**  
+[Blog](docs/zero-to-cloud-native-part9B-creating-Tekton-Pipeline.pdf)  
+
+**Part 9C - Finishing Deploying and Testing the Application**  
+[Blog](docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)
+
+## Coming soon - Day 2 Operations
+* **Logging**
+* **Monitoring**
+* **Automating with Terraform**
+* **RedHat Service Mesh**
+* **Deploying to a remote location with IBM Cloud Satellite**
+* **Managing code with Code Ready Workspace**
+
 
 
 
