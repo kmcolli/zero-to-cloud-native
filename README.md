@@ -50,7 +50,7 @@ To support these APIs, the following microservices, all written in Python, will 
 **Part 2 Microservices Architecture and Design**  
 [Blog ](docs/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
 [Video](<https://youtu.be/UGyIlZfHYok>)  
-[Presentation ](docs/ZeroToCloudNative-2-microservices.pdf)  
+[Presentation ](docs/zero-to-cloud-native-part2-microservices-design)  
 
 **Part 3 - Network and Security Configuration**  
 [Blog](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
