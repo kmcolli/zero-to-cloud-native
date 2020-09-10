@@ -53,11 +53,11 @@ To support these APIs, the following microservices, all written in Python, will 
 [Presentation ](docs/ZeroToCloudNative-2-microservices.pdf)  
 
 **Part 3 - Network and Security Configuration**  
-
 [Blog](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
 
 **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
 [Blog](docs/zero-to-cloud-native-part4-openshift.pdf)  
+[Video](<https://youtu.be/2oCHWzLPq3M>)
 
 **Part 5 - IBM Cloud Databases and Messaging**  
 [Blog](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
