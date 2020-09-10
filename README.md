@@ -54,6 +54,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 3 - Network and Security Configuration**  
 [Blog](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
+[Video](<https://youtu.be/xBCjiH0Ud1g>)
 
 **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
 [Blog](docs/zero-to-cloud-native-part4-openshift.pdf)  
@@ -61,6 +62,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 5 - IBM Cloud Databases and Messaging**  
 [Blog](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
+[Video](<https://youtu.be/Npq3dAtMtI8>) 
 
 **Part 6 - Setting up a Cloud-Native Development Environment**  
 [Blog](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
@@ -68,21 +70,27 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 7 - Preparing to Deploy**  
 [Blog](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
+[Video]  **coming soon**
 
 **Part 8 - Cloning and Importing the Code Base**    
 [Blog](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
+[Video]  **coming soon**
 
 **Part 9 - Deploying the Application**  
 [Blog](docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
+[Video]  **coming soon**
 
 **Part 9A - Deploying with a 'Classic' Pipeline**  
 [Blog](docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
+[Video]  **coming soon**
 
 **Part 9B - Deploying with a Tekton Pipeline**  
 [Blog](docs/zero-to-cloud-native-part9B-creating-Tekton-Pipeline.pdf)  
+[Video]  **coming soon**
 
 **Part 9C - Finishing Deploying and Testing the Application**  
-[Blog](docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)
+[Blog](docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)  
+[Video]  **coming soon**
 
 ## Coming soon - Day 2 Operations
 * **Logging**
