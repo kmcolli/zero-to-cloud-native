@@ -64,6 +64,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 6 - Setting up a Cloud-Native Development Environment**  
 [Blog](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
+[Video](<https://youtu.be/kerMUm_1OsA>)  
 
 **Part 7 - Preparing to Deploy**  
 [Blog](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
