@@ -19,13 +19,15 @@ The tutorials will go through the following topics:
 * Provisioning and configuring a managed OpenShift Cluster in a multi-zone region  
 * Provisioning and configuring Rabbit MQ for messaging  
 * Provisioning and configuring IBM Cloud Databases for a data layer  
-* Creating a classic CI/CD pipeline with integration with an enterprise git repository  * Creating a tekton CI/CD pipeline with integration with an enterprise git repository  
-* Deploying and running the application on OpenShift  * Leveraging IBM Log Analysis with LogDNA to provide logging and troubleshoot both from a development and support perspective.  
+* Creating a classic CI/CD pipeline with integration with an enterprise git repository  
+* Creating a tekton CI/CD pipeline with integration with an enterprise git repository  
+* Deploying and running the application on OpenShift  
+* Leveraging IBM Log Analysis with LogDNA to provide logging and troubleshoot both from a development and support perspective.  
 * Leveraging IBM Systems Monitoring with SysDig to monitor IBM Cloud Platform components, OpenShift cluster and the application itself.  
 * Tuning your cluster to optimize availability and resources.  
 * New functionality from IBM Cloud to clone and re-instate cluster namespaces  
 
-![](docs/images/zero-to-cloud-native.png)
+![](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/images/zero-to-cloud-native.png)
 
 ## ZERO to Cloud Native on IBM Cloud Application
 The tutorial application will comprise of three APIs:  
@@ -39,7 +41,8 @@ To support these APIs, the following microservices, all written in Python, will 
 * **frontend-api.py** – API interface to call the public facing APIs   
 * **getOCPVersions.py** – implementation of the getOCPVersions API which will quickly return a list of APIs leveraging a Redis Cache.  
 * **loadOCPVersions.py** – Kubernetes cronjob that will load current versions of OCP supported by IBM Cloud into a Redis database.   
-* **getOCPToken.py** – implementation of the real-time getOCPToken API.  * **enableNodeSSH.py** – implementation of the ‘long’ running enableNodeSSH API
+* **getOCPToken.py** – implementation of the real-time getOCPToken API.  
+* **enableNodeSSH.py** – implementation of the ‘long’ running enableNodeSSH API
 
 ## ZERO to Cloud Native Index
 **Part 1 Introduction and Overview**  
