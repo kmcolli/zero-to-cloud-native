@@ -1,9 +1,13 @@
 ![](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/images/02cn-logo.png)
 
+
 # ZERO to Cloud-Native on IBM Cloud
 
 With over 200 services available in IBM Cloud Catalog you can develop virtual any cloud native application that you can dream of.  But how can you best get started.  The purpose of this blog series ‘Zero to Cloud-Native with IBM Cloud’ is to showcase how to get started in developing with the IBM Cloud Catalog.  This multi-part series will cover topics such as architecture design and how to select the best services available in the IBM Cloud Catalog based on your architecture and application, how to combine services together and then how to implement day two operations while you are developing and also after you have deployed your application.
 
+## Resources
+**GitHub** - [GitHub Repository](https://github.com/kmcolli/zero-to-cloud-native)  
+**Videos** - [YouTube Channel](https://www.youtube.com/channel/UCjPMAulESpSRxyxl_tiViJA/videos)   
 
 
 ## Tutorial Oveview
