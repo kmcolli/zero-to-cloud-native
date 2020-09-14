@@ -27,7 +27,7 @@ The tutorials will go through the following topics:
 * Tuning your cluster to optimize availability and resources.  
 * New functionality from IBM Cloud to clone and re-instate cluster namespaces  
 
-![](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/images/zero-to-cloud-native.png)
+![](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/images/zero-to-cloud-native.png)
 
 ## ZERO to Cloud Native on IBM Cloud Application
 The tutorial application will comprise of three APIs:  
