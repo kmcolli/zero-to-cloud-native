@@ -52,53 +52,55 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ## ZERO to Cloud Native Index
 **Part 1 Introduction and Overview**  
-[Blog ](docs/zero-to-cloud-native-part1-introduction.pdf)    
+[Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part1-introduction.pdf)    
 [Video](<https://youtu.be/Eta09EJ5bvY>)  
-[Presentation ](docs/ZeroToCloudNative-1-Introduction.pdf)  
+[Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-1-Introduction.pdf)  
 
 **Part 2 Microservices Architecture and Design**  
-[Blog ](docs/zero-to-cloud-native-part2-microservices-design.pdf)    
+[Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
 [Video](<https://youtu.be/UGyIlZfHYok>)  
-[Presentation ](docs/ZeroToCloudNative-2-microservices.pdf)  
+[Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-2-microservices.pdf)  
 
 **Part 3 - Network and Security Configuration**  
-[Blog](docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
 [Video](<https://youtu.be/xBCjiH0Ud1g>)
 
 **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
-[Blog](docs/zero-to-cloud-native-part4-openshift.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part4-openshift.pdf)  
 [Video](<https://youtu.be/2oCHWzLPq3M>)
 
 **Part 5 - IBM Cloud Databases and Messaging**  
-[Blog](docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
 [Video](<https://youtu.be/Npq3dAtMtI8>) 
 
 **Part 6 - Setting up a Cloud-Native Development Environment**  
-[Blog](docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
 [Video](<https://youtu.be/kerMUm_1OsA>)  
 
 **Part 7 - Preparing to Deploy**  
-[Blog](docs/zero-to-cloud-native-part7-preparing-to-deploy)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part7-preparing-to-deploy)  
 [Video](<https://youtu.be/irAwcsY7mN8>) 
 
 **Part 8 - Cloning and Importing the Code Base**    
-[Blog](docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
-[Video](<https://youtu.be/61t1548B6UQ>)
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
+[Video](<https://youtu.be/61t1548B6UQ>). 
+[Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part8-presentation.pdf)
 
 **Part 9 - Deploying the Application**  
-[Blog](docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
-[Video]  **coming soon**
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
+[Video](<https://youtu.be/4_kUOYL41rA>)  
+[Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
 **Part 9A - Deploying with a 'Classic' Pipeline**  
-[Blog](docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
 [Video](<https://youtu.be/CrU5aHtQROc>)
 
 **Part 9B - Deploying with a Tekton Pipeline**  
-[Blog](docs/zero-to-cloud-native-part9B-creating-Tekton-Pipeline.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9B-creating-Tekton-Pipeline.pdf)  
 [Video]  **coming soon**
 
 **Part 9C - Finishing Deploying and Testing the Application**  
-[Blog](docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)  
 [Video]  **coming soon**
 
 ## Coming soon - Day 2 Operations
