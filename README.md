@@ -83,7 +83,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 8 - Cloning and Importing the Code Base**    
 [Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
-[Video](<https://youtu.be/61t1548B6UQ>). 
+[Video](<https://youtu.be/61t1548B6UQ>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part8-presentation.pdf)
 
 **Part 9 - Deploying the Application**  
