@@ -101,7 +101,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 9C - Finishing Deploying and Testing the Application**  
 [Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9C-Finish-deploying-test.pdf)  
-[Video]  **coming soon**
+[Video](<https://youtu.be/EOzqCQhm7Bc>)
 
 ## Coming soon - Day 2 Operations
 * **Logging**
