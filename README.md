@@ -88,7 +88,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 9 - Deploying the Application**  
 [Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
-[Video](<https://youtu.be/4_kUOYL41rA>)  
+[Video](<https://youtu.be/JF7rxSHYX7U)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
 **Part 9A - Deploying with a 'Classic' Pipeline**  
