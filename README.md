@@ -55,6 +55,7 @@ To support these APIs, the following microservices, all written in Python, will 
 [Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part1-introduction.pdf)    
 [Video](<https://youtu.be/Eta09EJ5bvY>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-1-Introduction.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/1-intro.md)
 
 **Part 2 Microservices Architecture and Design**  
 [Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
@@ -87,7 +88,7 @@ To support these APIs, the following microservices, all written in Python, will 
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part8-presentation.pdf)
 
 **Part 9 - Deploying the Application**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf)  
+[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf).   
 [Video](<https://youtu.be/JF7rxSHYX7U>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
