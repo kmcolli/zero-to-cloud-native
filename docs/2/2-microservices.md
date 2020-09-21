@@ -282,7 +282,46 @@ Pop Quiz - How would you architect this simple cloud native application
 from a microservices perspective? Which microservices patterns would you
 recommend?
 
-See the suggest design on the next page.
+Scroll down to see the suggested design.
+
+
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;   
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;   
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+&nbsp;    
+
+
+
+
+
+
+
 
 You will create the following microservices in this tutorial.
 
