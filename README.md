@@ -52,14 +52,14 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ## ZERO to Cloud Native Index
 **Part 1 Introduction and Overview**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/1-intro.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/1/1-intro.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part1-introduction.pdf) 
 [Video](<https://youtu.be/Eta09EJ5bvY>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-1-Introduction.pdf)  
    
 
 **Part 2 Microservices Architecture and Design**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/2-microservices.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/2/2-microservices.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
 [Video](<https://youtu.be/UGyIlZfHYok>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-2-microservices.pdf)  
