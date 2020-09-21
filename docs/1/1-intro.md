@@ -6,21 +6,14 @@ Part 1: Introduction and Overview
 
 ### 
 
-### Kevin Collins
+## Kevin Collins    
+kevincollins@us.ibm.com
+####Technical Sales Leader
+#### IBM Cloud Enterprise Containers -- Americas
 
-kevincollins\@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-Kunal Malhotra
---------------
-
-kunal.malhotra3\@ibm.com
-
+## Kunal Malhotra
+kunal.malhotra3@ibm.com
 #### Cloud Platform Engineer
-
 #### IBM Cloud MEA
 
 1 - Introduction
@@ -188,8 +181,7 @@ This is the architecture overview of the tutorial application we will
 create.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image1.png){width="6.5in"
-height="3.713888888888889in"}
+generated](.//media/image1.png)
 
 The tutorial application will comprise of three APIs:
 
@@ -255,8 +247,7 @@ on the CloudPak Provisioner application.
 Application Architecture:
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image2.png){width="6.5in"
-height="3.7111111111111112in"}
+generated](.//media/image2.png)
 
 4 - CloudPak Provisioner
 ========================

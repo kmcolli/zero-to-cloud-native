@@ -8,7 +8,7 @@ Part 2: Microservices Architecture and Design
 
 ### **Kevin Collins**
 
-kevincollins\@us.ibm.com
+kevincollins@us.ibm.com
 
 ### Technical Sales Leader
 
@@ -17,7 +17,7 @@ kevincollins\@us.ibm.com
 **Kunal Malhotra**
 ------------------
 
-kunal.malhotra3\@ibm.com
+kunal.malhotra3@ibm.com
 
 #### Cloud Platform Engineer
 
@@ -147,8 +147,7 @@ running in my cluster and grepping for one of the real-time services I
 have, I get the following result.
 
 ![A close up of text on a black background Description automatically
-generated](.//media/image1.png){width="6.5in"
-height="1.2472222222222222in"}
+generated](.//media/image1.png)
 
 You can tell from this screenshot that Kubernetes knows all the
 information about the internal service that I have exposed. But what
@@ -258,7 +257,8 @@ microservice to be more granular turned out to be very easy. All I had
 to do was create a new queue for each microservice! The rest of the code
 stayed the same.
 
-### 6- Tutorial
+6 - Tutorial
+------------------------------
 
 If you read part 1 -- introduction to this series, you will remember
 that the tutorial application will comprise of three APIs:
