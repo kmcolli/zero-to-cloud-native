@@ -52,48 +52,58 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ## ZERO to Cloud Native Index
 **Part 1 Introduction and Overview**  
-[Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part1-introduction.pdf)    
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/1-intro.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part1-introduction.pdf) 
 [Video](<https://youtu.be/Eta09EJ5bvY>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-1-Introduction.pdf)  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/1-intro.md)
+   
 
 **Part 2 Microservices Architecture and Design**  
-[Blog ](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/2-microservices.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part2-microservices-design.pdf)    
 [Video](<https://youtu.be/UGyIlZfHYok>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-2-microservices.pdf)  
 
 **Part 3 - Network and Security Configuration**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/3-network.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
 [Video](<https://youtu.be/xBCjiH0Ud1g>)
 
 **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part4-openshift.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/4-openshift.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part4-openshift.pdf)  
 [Video](<https://youtu.be/2oCHWzLPq3M>)
 
 **Part 5 - IBM Cloud Databases and Messaging**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/5-dbaas.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
 [Video](<https://youtu.be/Npq3dAtMtI8>) 
 
 **Part 6 - Setting up a Cloud-Native Development Environment**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/6-dev.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
 [Video](<https://youtu.be/kerMUm_1OsA>)  
 
 **Part 7 - Preparing to Deploy**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part7-preparing-to-deploy.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/7-code.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part7-preparing-to-deploy.pdf)  
 [Video](<https://youtu.be/irAwcsY7mN8>) 
 
 **Part 8 - Cloning and Importing the Code Base**    
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/8-codebase.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part8-cloning-importing-codebase.pdf)  
 [Video](<https://youtu.be/61t1548B6UQ>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part8-presentation.pdf)
 
 **Part 9 - Deploying the Application**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf).   
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9-deploy.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf).   
 [Video](<https://youtu.be/JF7rxSHYX7U>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
 **Part 9A - Deploying with a 'Classic' Pipeline**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9a-classic.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9A-creating-classic-pipeline.pdf)  
 [Video](<https://youtu.be/CrU5aHtQROc>)
 
 **Part 9B - Deploying with a Tekton Pipeline**  
@@ -101,7 +111,8 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video]  **coming soon**
 
 **Part 9C - Finishing Deploying and Testing the Application**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative -part9C-Finish-deploying-testing.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/pc-finish.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative -part9C-Finish-deploying-testing.pdf)  
 [Video](<https://youtu.be/EOzqCQhm7Bc>)
 
 ## Coming soon - Day 2 Operations
