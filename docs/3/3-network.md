@@ -1,32 +1,16 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+**Kevin Collins ( kevincollins@us.ibm.com)**  
+**Kunal Malhotra ( kunal.malhotra@ibm.com)**
 
 Part 3: IBM Cloud Account, Network and Security Configuration
 =============================================================
 
-### 
-
-### **Kevin Collins**
-
-kevincollins\@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-**Kunal Malhotra**
-------------------
-
-kunal.malhotra3\@ibm.com
-
-#### Cloud Platform Engineer
-
-#### IBM Cloud MEA
 
 1 - Resource Groups
 ===================
 
-1 -1 Introduction
+1 - 1 Introduction
 -----------------
 
 One of the first things that you need to do after you have designed and
@@ -43,7 +27,7 @@ You can read more about resource groups here:
 
 <https://cloud.ibm.com/docs/account?topic=account-rgs>
 
-1 -2 Tutorial - Resource Groups
+1 - 2 Tutorial - Resource Groups
 -------------------------------
 
 The first part of the tutorial is creating a new resource group for the
@@ -54,20 +38,18 @@ the resources we create during the tutorial into this resource group.
     access (IAM)
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image1.png){width="3.346405293088364in"
-height="1.3099606299212598in"}
+generated](.//media/image1.png)
 
 2)  Click on Resource Groups and then Create. Enter a name, I will be
     use **zero-to-cloud-native**
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image2.png){width="4.189542869641294in"
-height="1.501253280839895in"}
+generated](.//media/image2.png)
 
 2 Virtual Private Cloud - Network Design
 ========================================
 
-2 -- 1 Overview
+2 - 1 Overview
 ---------------
 
 After you have your resource group created, we can start deploying
@@ -87,8 +69,7 @@ to provide strong network isolation and control between the two
 environments.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image3.png){width="6.5in"
-height="1.1277777777777778in"}
+generated](.//media/image3.png)
 
 There are several things you need to setup for your VPC.
 
@@ -114,7 +95,7 @@ You can read more about IBM Cloud VPC here:
 
 <https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpc>
 
-2 -2 Tutorial -- Creating a Virtual Private Cloud
+2 - 2 Tutorial -- Creating a Virtual Private Cloud
 -------------------------------------------------
 
 Let's start by creating a VPC for our tutorial. From the IBM Cloud
@@ -122,12 +103,11 @@ Catalog, click on the hamburger menu, select VPC Infrastructure and then
 VPC.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image4.png){width="1.8632950568678914in"
-height="2.1437904636920386in"}
+generated](.//media/image4.png)
 
 On the next screen click create, to create a new VPC.
 
-![](.//media/image5.png){width="6.5in" height="0.7375in"}
+![](.//media/image5.png)
 
 On the following screen, you will need to enter information to create
 your VPC.
@@ -177,15 +157,13 @@ consider un-attaching the public gateway if you do not require Internet
 connectivity.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image6.png){width="6.5in"
-height="4.704166666666667in"}
+generated](.//media/image6.png)
 
 After entering all the information, click Create virtual private cloud
 on the right-hand side of the screen.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image7.png){width="1.457425634295713in"
-height="1.6143788276465443in"}
+generated](.//media/image7.png)
 
 The next screen will take you to a list of virtual private clouds. Click
 on the virtual private cloud you just created. We will need to create
@@ -193,8 +171,7 @@ additional subnets to support our multizone cluster and we will need to
 create access rules for our application in the security group section.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image8.png){width="6.5in"
-height="1.117361111111111in"}
+generated](.//media/image8.png)
 
 The next thing we will want to do is to create our subnets for the
 additional two availability zones for our multizone cluster.
@@ -203,8 +180,7 @@ Scrolling down to our subnets in this VPC section. Click on create to
 create another subnet.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image9.png){width="6.5in"
-height="1.3458333333333334in"}
+generated](.//media/image9.png)
 
 Follow the same steps you did when you created your first subnet when
 you created your VPC. I will be using these settings for the second
@@ -226,8 +202,7 @@ Once you have entered all the settings, click on Create Subnet to create
 this new subnet.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image10.png){width="4.372549212598425in"
-height="4.125892388451444in"}
+generated](.//media/image10.png)
 
 Repeat the same process of the third subnet. I will be using these
 settings for the third and final subnet in Dallas 1.
@@ -252,8 +227,7 @@ right-hand side, click on the security group for the VPC you just
 created.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image11.png){width="6.5in"
-height="2.8180555555555555in"}
+generated](.//media/image11.png)
 
 By default, when you create a VPC all outbound traffic will be allowed
 and all inbound traffic will be blocked. Since we did enable SSH and
@@ -265,15 +239,13 @@ API interface.
 Click on create in the Inbound rules section to create a new rule.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image12.png){width="6.5in"
-height="2.2534722222222223in"}
+generated](.//media/image12.png)
 
 Starting with the ports for OpenShift, enter 30000 as the Port min and
 32767 as the Port max and click save.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image13.png){width="1.9738560804899388in"
-height="1.4577799650043743in"}
+generated](.//media/image13.png)
 
 Repeat the same process for port 80 ( web application ) and port 8000 (
 API Interface )
@@ -282,19 +254,17 @@ After creating the additional rules, your **Inbound rules** should look
 like this.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image14.png){width="6.5in"
-height="2.589583333333333in"}
+generated](.//media/image14.png)
 
 Next, we also need to create outbound rules for both port 80 and port
 8000. Under outbound rules, click on Create.
 
-![](.//media/image15.png){width="6.5in" height="0.6006944444444444in"}
+![](.//media/image15.png)
 
 On the next screen, create a new outbound rule for port 80.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image16.png){width="2.1043318022747157in"
-height="1.91503280839895in"}
+generated](.//media/image16.png)
 
 Repeat the same process to create another outbound rule for port 8000.
 
@@ -305,7 +275,9 @@ When developing your cloud-native application, you will most likely want
 a domain that is easily readable rather than the default domain you get
 when you create an OpenShift cluster like the following:
 
+```
 getroks-nonprod-ocp-73aebe0673131e634c608c4167edcc2aeb-0000.us-south.containers.appdomain.cloud
+```
 
 One of the services we have in IBM Cloud is called Cloud Internet
 Services which provides reliability, performance, and security for
@@ -324,15 +296,17 @@ You can read more about IBM Cloud Domain Name Registration here:
 
 You can read more about IBM Cloud Internet Services here:
 
-[[https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis]{.ul}](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)
+[https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)
 
-3 -- 1 Custom Domain Tutorial
+3 - 1 Custom Domain Tutorial
 -----------------------------
 
 If you don't already have a domain that you would like to use, then the first thing we will need to do is create one. From the IBM Cloud catalog, search from Domain and then click on Domain Name Registration Service.
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
- ![A screenshot of a cell phone Description automatically generated](.//media/image17.png){width="2.045178258967629in" height="1.8627449693788276in"}
+ ![A screenshot of a cell phone Description automatically generated](.//media/image17.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 On the next screen, there are no options, on the bottom right corner,
@@ -344,14 +318,12 @@ zero-to-cloud-native.com. Click on Check Availability to make sure the
 domain you want is available and then click Continue.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image18.png){width="6.5in"
-height="1.3979166666666667in"}
+generated](.//media/image18.png)
 
 Enter your registrant information and click Order Now.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image19.png){width="4.344338363954506in"
-height="2.6339873140857395in"}
+generated](.//media/image19.png)
 
 After about 5 minutes, you will see the domain you requested shows up in
 the domain view.
@@ -360,8 +332,7 @@ Expand the domain you created and not the custom name servers to use
 later.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image20.png){width="6.5in"
-height="1.1020833333333333in"}
+generated](.//media/image20.png)
 
 The next step will be connecting the domain you just created with Cloud
 Internet Services. Please note, you will need to verify your domain
@@ -379,8 +350,7 @@ Internet Services tile. We will use Cloud Internet Service to manage the
 DNS and Internet security for the domain we just created.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image21.png){width="3.261438101487314in"
-height="2.439458661417323in"}
+generated](.//media/image21.png)
 
 This brings up a screen to select the pricing plan you want for Internet
 Services. Select the Standard plan as being a tutorial and not for a
@@ -389,8 +359,7 @@ provided by the other plans. For a production system, we strongly
 recommend that you select one of the Enterprise plans.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image22.png){width="3.8436734470691163in"
-height="3.1176465441819774in"}
+generated](.//media/image22.png)
 
 At the bottom of the screen, enter a name for the service and the
 resource group you created earlier to place the service in. I will be
@@ -399,29 +368,25 @@ Click create after selecting the plan and entering the name for your
 service.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image23.png){width="6.5in"
-height="1.3479166666666667in"}
+generated](.//media/image23.png)
 
 This will create your service and will bring you to the overview page of
 your IBM Cloud Internet Services instance you just created. To get
 started ... click Let's get started.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image24.png){width="4.705882545931758in"
-height="1.237305336832896in"}
+generated](.//media/image24.png)
 
 This will bring up a new page to setup your domain. Enter the domain
 name you created earlier and click next.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image25.png){width="2.1000568678915137in"
-height="2.3137259405074366in"}
+generated](.//media/image25.png)
 
 You can skip the setup your DNS records, just click next.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image26.png){width="2.2026148293963255in"
-height="2.1166272965879265in"}
+generated](.//media/image26.png)
 
 Next, on the delegate domain management screen, note the new NS records.
 Before you click next, you will need to update the domain you created
@@ -434,8 +399,7 @@ like you did in the previous step. Under the domain you created select
 Unlock from the Lock Domain drop down.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image27.png){width="6.5in"
-height="1.3840277777777779in"}
+generated](.//media/image27.png)
 
 Next click on Add/ Edit NS and enter the NS specified on the Cloud
 Internet Services screen.
@@ -443,15 +407,13 @@ Internet Services screen.
 Enter the new name servers and click Associate.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image28.png){width="3.3660126859142605in"
-height="1.9750153105861767in"}
+generated](.//media/image28.png)
 
 Now, go back to Cloud Internet Services window and click the final Next
 button.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image29.png){width="1.9930555555555556in"
-height="4.26797353455818in"}
+generated](.//media/image29.png)
 
 After you click the final next button, you will be taken to the Overview
 page of IBM Cloud Internet Services. Your domain names are now being
@@ -467,8 +429,7 @@ Catalog, search for Certificate Manager, and then click the Certificate
 Manager tile.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image30.png){width="4.045751312335958in"
-height="1.5789665354330709in"}
+generated](.//media/image30.png)
 
 You can read more about Certificate Manager here:
 
@@ -494,23 +455,20 @@ Certificate Manager you will not see any certificates and will need to
 create one. To do so, click the Order button.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image31.png){width="4.758170384951881in"
-height="1.3837325021872267in"}
+generated](.//media/image31.png)
 
 Because we are using Cloud Internet Services as our DNS provider, click
 Continue under IBM Cloud Internet Services (CIS) tile.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image32.png){width="4.385606955380577in"
-height="1.549019028871391in"}
+generated](.//media/image32.png)
 
 On the next screen, you will see a warning message saying there are no
 IBM Cloud Internet Services instances that Certificate Manager has
 permission to access.
 
 ![A picture containing bird Description automatically
-generated](.//media/image33.png){width="4.529411636045494in"
-height="0.709413823272091in"}
+generated](.//media/image33.png)
 
 To fix this, we will need to authorize certificate manager to interact
 with Cloud Internet Services.
@@ -531,8 +489,7 @@ with Cloud Internet Services.
 4.  Assign the **Manager** role to allow Certificate Manager to view the
     CIS instance and its domains. Then, click **Authorize**.![A
     screenshot of a cell phone Description automatically
-    generated](.//media/image34.png){width="6.5in"
-    height="6.826388888888889in"}
+    generated](.//media/image34.png)
 
 Now, when you go back to the Certificate Manager order certificate
 screen you will not see that warning message.
@@ -548,16 +505,14 @@ certificate and notify you. You can also automate deployments through a
 CI/CD process to deploy the renewed certificates.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image35.png){width="4.238221784776903in"
-height="5.3856211723534555in"}
+generated](.//media/image35.png)
 
 Next, click on the Domains tab and select the IBM Cloud Internet
 Services (CIS) instance you created. Select both Add Domain and Add
 Wildcard, and click Order.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image36.png){width="4.013071959755031in"
-height="2.8455938320209975in"}
+generated](.//media/image36.png)
 
 This will order your new certificates and will take a couple of minutes.
 We won't be using the certificates right away so you don't have to wait
@@ -594,8 +549,7 @@ To do so, go to the IBM Cloud, search for Key Protect, and click the Key
 Protect tile.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image37.png){width="3.620915354330709in"
-height="2.046048775153106in"}
+generated](.//media/image37.png)
 
 Just like you did with the other services so far, there are a couple of
 settings to enter to create the service.
@@ -615,15 +569,14 @@ default Public and Private.
 
 After entering all your settings, click Create.
 
-![](.//media/image38.png){width="6.5in" height="5.90625in"}
+![](.//media/image38.png)
 
 The next thing we need to do is add an encryption key to Key Protect.
 Navigate to your Key Protect instance from your IBM Cloud resource list
 and click Add Key.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image39.png){width="6.5in"
-height="1.6777777777777778in"}
+generated](.//media/image39.png)
 
 On the next screen you have the option of either having the service
 create a key or you can import your own key. For this tutorial, we will
@@ -631,8 +584,7 @@ just have Key Protect create our own Root key, but if you can easily
 import your own key if you have one.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image40.png){width="2.647445319335083in"
-height="1.9411767279090113in"}
+generated](.//media/image40.png)
 
 Give your key a meaningful name such as zero-to-cloud-native-root-key
 and click Create Key.

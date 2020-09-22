@@ -1,20 +1,10 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+**Kevin Collins ( kevincollins@us.ibm.com)**  
+**Kunal Malhotra ( kunal.malhotra@ibm.com)**
 
 Part 1: Introduction and Overview
 =================================
-
-### 
-
-## Kevin Collins    
-kevincollins@us.ibm.com
-####Technical Sales Leader
-#### IBM Cloud Enterprise Containers -- Americas
-
-## Kunal Malhotra
-kunal.malhotra3@ibm.com
-#### Cloud Platform Engineer
-#### IBM Cloud MEA
 
 1 - Introduction
 ================
@@ -32,7 +22,7 @@ day two operations after you have deployed your application.
 You can find links to all the blog entries, source code and videos at
 this GitHub repository:
 
-[[https://github.com/kmcolli/zero-to-cloud-native-ibm-cloud]{.ul}](https://github.com/kmcolli/zero-to-cloud-native-ibm-cloud)
+[https://github.com/kmcolli/zero-to-cloud-native-ibm-cloud](https://github.com/kmcolli/zero-to-cloud-native-ibm-cloud)
 
 The main focus of this series will be guiding you through a tutorial in
 developing a complete cloud native application from the ground up. There
@@ -91,7 +81,7 @@ the series will go through the following:
     manually, with a 'Classic' CI/CD toolchain and finally with a Tekton
     toolchain.
 
-> **Future Planned Sessions**
+### **Future Planned Sessions**
 
 10. Logging -- how to leverage logging while developing your
     cloud-native application and how to leverage logging to support the
@@ -263,11 +253,11 @@ If you would like to try out the CloudPak Provisioner APIs, I have
 created a Postman Collection that you can import.
 
 Postman
-Collection: https://www.getpostman.com/collections/e8af6bd430672b12df09
+Collection: [https://www.getpostman.com/collections/e8af6bd430672b12df09](https://www.getpostman.com/collections/e8af6bd430672b12df09)
 
 You can also view more detailed documentation on using the APIs here:
 
-[[https://github.com/kmcolli/CloudPakProvisioner]{.ul}](https://github.com/kmcolli/CloudPakProvisioner)
+[https://github.com/kmcolli/CloudPakProvisioner](https://github.com/kmcolli/CloudPakProvisioner)
 
 API Reference
 -------------

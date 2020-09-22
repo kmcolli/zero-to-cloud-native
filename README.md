@@ -65,7 +65,7 @@ To support these APIs, the following microservices, all written in Python, will 
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-2-microservices.pdf)  
 
 **Part 3 - Network and Security Configuration**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/3-network.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/3/3-network.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part3-network-and-security-configuration.pdf)  
 [Video](<https://youtu.be/xBCjiH0Ud1g>)
 

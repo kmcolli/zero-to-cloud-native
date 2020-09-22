@@ -1,27 +1,12 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+**Kevin Collins ( kevincollins@us.ibm.com)**  
+**Kunal Malhotra ( kunal.malhotra@ibm.com)**
 
 Part 2: Microservices Architecture and Design
 =============================================
 
 ### 
-
-### **Kevin Collins**
-
-kevincollins@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-**Kunal Malhotra**
-------------------
-
-kunal.malhotra3@ibm.com
-
-#### Cloud Platform Engineer
-
-#### IBM Cloud MEA
 
 1 - Introduction
 ----------------
@@ -158,13 +143,13 @@ environment variables.
 Below is sample Python code the constructs a REST API url to call the
 service that will retrieve an OpenShift Login Token:
 
-port =
-os.environ.get(\"CLOUDPAK_PROVISIONER_OPENSHIFT_REALTIME_SERVICE_SERVICE_PORT\")
+```
+port = os.environ.get(\"CLOUDPAK_PROVISIONER_OPENSHIFT_REALTIME_SERVICE_SERVICE_PORT\")
 
-url =
-\"http://\"+os.environ.get(\"CLOUDPAK_PROVISIONER_OPENSHIFT_REALTIME_SERVICE_SERVICE_HOST\")
+url = "http://"+os.environ.get("CLOUDPAK_PROVISIONER_OPENSHIFT_REALTIME_SERVICE_SERVICE_HOST")
 
-openshift_realtime_url = url+\":\"+port+\"/api/v1/getRoksToken/\"
+openshift_realtime_url = url+":"+port+"/api/v1/getRoksToken/"
+```
 
 I can now call the backend microservice that returns an OpenShift login
 token by only using the name of the service I exposed. If the IP of
