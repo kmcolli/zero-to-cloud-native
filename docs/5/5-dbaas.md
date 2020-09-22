@@ -1,31 +1,16 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+**Kevin Collins ( kevincollins@us.ibm.com)**  
+**Kunal Malhotra ( kunal.malhotra@ibm.com)**
 
 Part 5: IBM Cloud Databases Provisioning and Configuration
 ==========================================================
 
-**Kevin Collins**
------------------
-
-kevincollins\@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-**Kunal Malhotra**
-------------------
-
-kunal.malhotra3\@ibm.com
-
-#### Cloud Platform Engineer
-
-#### IBM Cloud MEA
 
 1 - IBM Cloud Databases
 =======================
 
-### 1 -- 1 Introduction
+### 1 - 1 Introduction
 
 Developing cloud native applications vs traditional applications is very
 different from a data perspective. In a traditional monolith
@@ -50,7 +35,7 @@ how to support, scale and secure each database.
 Enter IBM Cloud Databases. IBM Cloud Databases supports a wide range of
 databases that are managed for you.
 
-![](.//media/image1.png){width="6.5in" height="0.5423611111111111in"}
+![](.//media/image1.png)
 
 This means that IBM takes care of all the hard parts of provisioning,
 supporting and maintaining different databases. IBM takes care of
@@ -63,7 +48,7 @@ architecture. It's better to fail fast by developing say a quick MVP
 using MongoDB and being able to switch quickly to say a Cloudant
 database with minimal investment.
 
-2 Tutorial -- IBM Cloud Databases
+2 - Tutorial -- IBM Cloud Databases
 ---------------------------------
 
 Referring back to our application architecture of our tutorial
@@ -71,8 +56,7 @@ application, we will be deploying two database / messaging services (
 Redis and RabbitMQ ) that are part of IBM Cloud Databases.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image2.png){width="6.0849671916010495in"
-height="3.4767530621172353in"}
+generated](.//media/image2.png)
 
 ### 
 
@@ -84,7 +68,7 @@ and Messages for RabbitMQ here:
 
 <https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started>
 
-### 2 -- 1 Tutorial -- IBM Cloud Databases for Redis
+### 2 - 1 Tutorial -- IBM Cloud Databases for Redis
 
 In the zero-to-cloud-native application we are going to develop and
 deploy, we are going to leverage caching to return data very quickly to
@@ -133,8 +117,7 @@ Cloud Internet Services to access Certificate Manager.
     access the Key Protect. Then, click **Authorize**.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image3.png){width="5.029970472440945in"
-height="4.588236001749781in"}
+generated](.//media/image3.png)
 
 You will notice that I selected all instances in my account for Database
 for Redis to a specific instance of Key Protect. The reason for this is
@@ -148,7 +131,7 @@ Going back to the IBM Cloud Catalog, search for Redis, and click the
 Databases for Redis tile.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image4.png){width="6.5in" height="2.16875in"}
+generated](.//media/image4.png)
 
 You will notice that there are several Redis options. If you want to
 manage, scale and secure Redis yourself you can install it directly in
@@ -176,15 +159,14 @@ database.
 After entering all these settings, click create.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image5.png){width="6.5in"
-height="3.638888888888889in"}
+generated](.//media/image5.png)
 
 After clicking create, your database will be ready to use in a few
 minutes. This is why I strongly recommend using IBM Cloud Databases to
 manage and provision your cloud native databases, it doesn't get easier
 than this to setup and configure.
 
-### 2 -2 Tutorial -- IBM Cloud Messages for RabbitMQ
+### 2 - 2 Tutorial -- IBM Cloud Messages for RabbitMQ
 
 We will be using RabbitMQ as the messaging layer in-between
 microservices. Just like with Redis, I don't want to have to worry about
@@ -230,7 +212,7 @@ RabbitMQ services from do it yourself to a managed service with IBM
 Cloud Databases Messages for RabbitMQ.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image6.png){width="6.5in" height="2.65in"}
+generated](.//media/image6.png)
 
 To create your Messages for Rabbit MQ instance you need to select a
 region. Like we have with all our other services we want to choose
@@ -248,8 +230,7 @@ we created in step 3.
 After entering all of these settings, click Create.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image7.png){width="6.5in"
-height="2.303472222222222in"}
+generated](.//media/image7.png)
 
 Just like the provisioning of Cloud Databases for Redis, that is all you
 have to do. Messages for RabbitMQ will be available in a couple of

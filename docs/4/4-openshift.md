@@ -1,32 +1,15 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+**Kevin Collins ( kevincollins@us.ibm.com)**  
+**Kunal Malhotra ( kunal.malhotra@ibm.com)**
 
 Part 4: OpenShift Provisioning and Configuration
 ================================================
 
-### 
-
-### **Kevin Collins**
-
-kevincollins\@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-**Kunal Malhotra**
-------------------
-
-kunal.malhotra3\@ibm.com
-
-#### Cloud Platform Engineer
-
-#### IBM Cloud MEA
-
 1 IBM Cloud Managed OpenShift
 =============================
 
-1 -1 Introduction
+1 - 1 Introduction
 -----------------
 
 In this tutorial, we will use IBM Cloud's Managed OpenShift service to
@@ -61,7 +44,7 @@ is not really needed. I've decided to use a multizone cluster of this
 tutorial to show the value and ease of using a multizone cluster that
 you would typically see in a production environment.
 
-### 1 -- 2 Preparing for Your Cluster
+## 1 - 2 Preparing for Your Cluster
 
 Before provisioning your cluster, you need to consider which network
 infrastructure you want to use from a Virtual Private Cloud to Classic
@@ -70,7 +53,7 @@ cluster in the Virtual Private Cloud we already created to give our
 application an additional layer of security from a networking
 perspective.
 
-### 1 -- 3 Cloud Object Storage
+### 1 - 2 - 1 Cloud Object Storage
 
 For a cluster provisioned on a virtual private cloud, the internal image
 registry is backed by IBM Cloud Object Storage. If you don't already
@@ -79,8 +62,7 @@ need to create one. To do so, click on the IBM Cloud Catalog, search for
 Object Storage and click the IBM Cloud Object Storage tile.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image1.png){width="4.462929790026247in"
-height="2.1241830708661418in"}
+generated](.//media/image1.png)
 
 You can read more about Cloud Object Storage here:
 
@@ -100,23 +82,21 @@ For this tutorial I will use the following settings:
 
 After entering your settings for Cloud Object Storage, click Create.
 
-### 1 -- 3 Provisioning RedHat OpenShift on IBM Cloud
+## 1 - 3 Provisioning RedHat OpenShift on IBM Cloud
 
 To provision an OpenShift cluster, click on the IBM Cloud Catalog,
 search for OpenShift and then click on the Red Hat OpenShift on IBM
 Cloud tile.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image2.png){width="4.529411636045494in"
-height="2.2719641294838144in"}
+generated](.//media/image2.png)
 
 The first thing we need to do is to specify a version for our OpenShift
 Cluster. I'm going to select the latest supported version in IBM Cloud
 which is version 4.4.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image3.png){width="4.470588363954506in"
-height="1.7729516622922135in"}
+generated](.//media/image3.png)
 
 Next, you need to provide an OCP entitlement for the OCP license. If you
 had bought a CloudPak from IBM, I could apply that OCP license to this
@@ -124,8 +104,7 @@ cluster. As CloudPaks are out of scope for this tutorial, I will leave
 the default value Purchase additional licenses for this worker pool.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image4.png){width="4.4355544619422576in"
-height="0.8496741032370954in"}
+generated](.//media/image4.png)
 
 We then need to specify the infrastructure to use with our cluster. As
 we have been through, we will be deploying our cluster on a virtual
@@ -137,8 +116,7 @@ for your cluster's internal registry using the Cloud Object Storage
 instance you select.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image5.png){width="4.3723173665791775in"
-height="2.385621172353456in"}
+generated](.//media/image5.png)
 
 Next, we specify the location where we want to deploy our cluster to.
 For the resource group name, I will select the resource group we have
@@ -184,15 +162,13 @@ as part of IBM's managed service for OpenShift.
 For this tutorial, I'm going to go with Shared Virtual.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image6.png){width="4.414239938757655in"
-height="1.065359798775153in"}
+generated](.//media/image6.png)
 
 Finally, I need to give my cluster a name. I'm going to name my cluster
 zero-to-cloud-native and then click Create.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image7.png){width="4.333333333333333in"
-height="1.3250010936132983in"}
+generated](.//media/image7.png)
 
 This will start provisioning your cluster and you can start using it in
 about 15 minutes. Next up, we will setup the cloud databases we will be

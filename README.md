@@ -70,12 +70,12 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video](<https://youtu.be/xBCjiH0Ud1g>)
 
 **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/4-openshift.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/4/4-openshift.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part4-openshift.pdf)  
 [Video](<https://youtu.be/2oCHWzLPq3M>)
 
 **Part 5 - IBM Cloud Databases and Messaging**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/5-dbaas.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/5/5-dbaas.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part5-cloud-databases-and-messaging.pdf)  
 [Video](<https://youtu.be/Npq3dAtMtI8>) 
 
