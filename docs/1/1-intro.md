@@ -1,7 +1,7 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
-**Kevin Collins ( kevincollins@us.ibm.com)**  
-**Kunal Malhotra ( kunal.malhotra@ibm.com)**
+**Kevin Collins ( kevincollins@us.ibm.com )**  
+**Kunal Malhotra ( kunal.malhotra3@ibm.com )**
 
 Part 1: Introduction and Overview
 =================================

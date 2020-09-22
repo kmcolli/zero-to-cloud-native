@@ -1,7 +1,7 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
-**Kevin Collins ( kevincollins@us.ibm.com)**  
-**Kunal Malhotra ( kunal.malhotra@ibm.com)**
+**Kevin Collins ( kevincollins@us.ibm.com )**  
+**Kunal Malhotra ( kunal.malhotra3@ibm.com )**
 
 Part 6: Setting Up and Configuring a Cloud-Native Development Environment
 =========================================================================
@@ -91,8 +91,7 @@ It enables highlighting of commands whilst they are typed at a zsh prompt into a
 To install zsh-syntax-highlightin run:
 
 ```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 ##  
 **zsh-autosuggestions**
@@ -101,8 +100,7 @@ Suggests commands as you type based on history and completions.
 
 To install zsh-autosuggestions run:
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 **git**
@@ -123,8 +121,7 @@ to cycle through matches
 
 To install history-substring-serach run:
 ```
-git clone https://github.com/zsh-users/zsh-history-substring-search
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 ```
 
 **zsh-autocomplete**
@@ -133,8 +130,7 @@ Auto completes and corrects typos:
 
 To install zsh-autocomplete run:
 ```
-git clone https://github.com/marlonrichert/zsh-autocomplete
-${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 ```
 2 - 4 kube-ps1: Kubernetes prompt
 ----------------------------------
