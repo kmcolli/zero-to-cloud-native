@@ -80,9 +80,11 @@ Using your command line, navigate to where you want to store your code.
 Create a directory such as zero-to-cloud-native and then switch to the
 directory.
 
+```
 mkdir zero-to-cloud-native
 
 cd zero-to-cloud-native
+```
 
 While under the directory you just created, you will need to clone each
 code repository.
