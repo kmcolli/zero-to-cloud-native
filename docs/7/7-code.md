@@ -487,7 +487,7 @@ generated](.//media/image46.png)
 **IMPORTANT:** add the API Key you just created to your temporary file,
 you will need this value later.
 
-### 7 - Container Registry
+## 7 - Container Registry
 
 Before we can deploy our images into a container registry, we will need
 to create a namespace in IBM Cloud to store our images. To create a
