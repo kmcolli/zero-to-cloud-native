@@ -1,32 +1,13 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
 
+**Kevin Collins ( kevincollins@us.ibm.com )**  
+**Kunal Malhotra ( kunal.malhotra3@ibm.com )**  
+
 Part 9C: Finish Deploying and Testing the Application
 =====================================================
 
-**Kevin Collins**
------------------
-
-kevincollins\@us.ibm.com
-
-### Technical Sales Leader
-
-### IBM Cloud Enterprise Containers -- Americas
-
-**Kunal Malhotra**
-------------------
-
-kunal.malhotra3\@ibm.com
-
-#### Cloud Platform Engineer
-
-#### IBM Cloud MEA
-
-### 
-
-### 
-
-1 Create remaining Pipelines
+1 - Create remaining Pipelines
 ----------------------------
 
 If you followed parts 9A and 9B, you created toolchains for the
@@ -48,17 +29,18 @@ After you have created all your delivery pipelines, make sure all of
 your pods are running. Log into your OpenShift cluster using the
 terminal and run:
 
-**oc get pods**
+```
+oc get pods
+```
 
 ![A close up of text on a black background Description automatically
-generated](.//media/image1.png){width="6.013888888888889in"
-height="2.4166666666666665in"}
+generated](.//media/image1.png)
 
 Your output should look like the above. Note that the
 load-ocp-versions-02cn microservice is a cronjob that runs every 5
 minutes. You may see a different number of completions.
 
-### 2 -- Configure Cloud Internet Service
+## 2 - Configure Cloud Internet Service
 
 Part of the deployment.yaml files that were run from the frontend api
 and web delivery pipelines created a load balancer service. RedHat
@@ -74,13 +56,14 @@ To do so, log into your OpenShift cluster using the terminal. Once you
 are logged in, switch to the zero-to-cloud-native projects and list all
 the services using the following commands:
 
+```
 oc project zero-to-cloud-native
 
 oc get svc
+```
 
 ![A close up of a screen Description automatically
-generated](.//media/image2.png){width="6.5in"
-height="1.2479166666666666in"}
+generated](.//media/image2.png)
 
 This will output 4 services.
 
@@ -108,61 +91,56 @@ this external ip to the domain we created. From you IBM Cloud dashboard
 click on Services.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image3.png){width="2.0065354330708662in"
-height="1.8587674978127735in"}
+generated](.//media/image3.png)
 
 Next, click on your Cloud Internet Services for the zero to cloud native
 tutorial.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image4.png){width="4.725489938757655in"
-height="1.1869258530183726in"}
+generated](.//media/image4.png)
 
 On the next page, click on DNS Records.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image5.png){width="2.8758169291338582in"
-height="2.2828324584426944in"}
+generated](.//media/image5.png)
 
 To create a DNS entry, we are going to create a CNAME DNS record.
 
-Type: CNAME
+**Type:** CNAME
 
-Name: Past in the value you copied from the
+**Name:** Past in the value you copied from the
 zero-to-cloud-native-api-service
 
-Alias Doman: api.\<the domain CIS is managing\>
+**Alias Domain:** api.\<the domain CIS is managing\>
 
 See an example below:
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image6.png){width="4.518203193350831in"
-height="1.307189413823272in"}
+generated](.//media/image6.png)
 
 Repeat the same steps for web frontend service. After you are done, you
 should see two new DNS entries.
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image7.png){width="6.5in"
-height="2.1458333333333335in"}
+generated](.//media/image7.png)
 
 Congratulations!! You have now successfully deployed and configured the
 zero to cloud native application. Now let's test it!
 
-3 -- Test the application
+3 - Test the application
 -------------------------
 
 As we have discussed, there are two frontend interfaces to the zero to
 cloud native tutorial application. A traditional web frontend and an API
 frontend.
 
-### 3 -- 1 Testing the API Application
+### 3 - 1 Testing the API Application
 
 To test the API interface, I will be using Postman which you installed
 in Part 5. Feel free to use any other API tool or even the curl command
 if you like.
 
-### 3 -- 1 -- 1 Get OCP Versions
+#### 3-1-1 Get OCP Versions
 
 Start by testing the get OCP Versions API. Open the PostMan application,
 change to a GET call, and enter your host name. If you followed the same
@@ -174,19 +152,17 @@ In my case, the host for this API is:
 https://api.zero-to-cloud-native.com:8000/api/v1/getOCPVersions/
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image8.png){width="6.5in"
-height="0.9927001312335958in"}
+generated](.//media/image8.png)
 
 After entering this hostname, you will get a JSON response like this:
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image9.png){width="6.5in"
-height="1.7270833333333333in"}
+generated](.//media/image9.png)
 
 The output will contain the current version of RedHat OpenShift that are
 supported by IBM.
 
-### 3 -- 1 -- 2 Get OCP Token
+#### 3-1-2 Get OCP Token
 
 Next, we will test retrieving a token to log into OpenShift. Just like
 you did to test the get OCP versions API, select **POST**, keep the
@@ -203,34 +179,30 @@ OCP login token is in.
 Under the Body tab, click on raw and on the right, select JSON. Then in
 the input window enter JSON in this format:
 
+```
 {
-
-\"apikey\": \"\<IBM CLOUD API KEY\",
-
-\"cluster_name\": \"e.g. zero-to-cloud-native\"
-
+    "apikey": "<IBM CLOUD API KEY>",
+    "cluster_name": "e.g. zero-to-cloud-native"
 }
-
+```
 ![A screenshot of a social media post Description automatically
-generated](.//media/image10.png){width="6.5in"
-height="1.6826388888888888in"}
+generated](.//media/image10.png)
 
 After entering all of these settings, click Send. This will return a
 JSON response like the following:
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image11.png){width="6.5in"
-height="1.4743055555555555in"}
+generated](.//media/image11.png)
 
 Now, let's test the login command to see if we can log into our
 OpenShift cluster. Copy the login field:
 
-oc login \--token=YLv3cL3tMdJVTbM1gbpruc-sdqX8xSlt24qD5dFTg88
-\--server=https://c107-e.us-south.containers.cloud.ibm.com:31899
-
+```
+oc login --token=YLv3cL3tMdJVTbM1gbpruc-sdqX8xSlt24qD5dFTg88 --server=https://c107-e.us-south.containers.cloud.ibm.com:31899
+```
 Start your iTerm terminal and paste the command and hit enter.
 
-![](.//media/image12.png){width="6.5in" height="0.7006944444444444in"}
+![](.//media/image12.png)
 
 You should see output like the above. Now when you want to log into your
 OpenShift cluster, you can just run this API and don't have to log into
@@ -240,16 +212,15 @@ Note, you can also call the API using curl from the command line.
 
 Example:
 
-curl -X POST -H \"Content-Type: application/json\"
-\"https://api.zero-to-cloud-native.com:8000/api/v1/getOCPToken/\" -d
-\'{\"apikey\": \"IFvxsWmtv0r3IDDHJAJAHJHAJHJHJHHGres24uByKbc12H\",
-\"cluster_name\": \"zero-to-cloud-native\"}\'
+```
+curl -X POST -H "Content-Type: application/json" "https://api.zero-to-cloud-native.com:8000/api/v1/getOCPToken/" -d '{"apikey": "IFvxsWmtv0r3IDDHJAJAHJHAJHJHJHHGres24uByKbc12H", "cluster_name": "zero-to-cloud-native"}'
+```
 
-![](.//media/image13.png){width="6.5in" height="0.7326388888888888in"}
+![](.//media/image13.png)
 
 Note, the example above uses a temporary API that has been removed.
 
-### 3 -- 1 -- 3 Enable SSH
+#### 3-1-3 Enable SSH
 
 Generally speaking, we don't recommend SSHing directly into OpenShift
 worker nodes, however when you are doing advanced configuration and
@@ -268,24 +239,21 @@ parameters, your IBM Cloud apikey and the cluster_name.
 
 https://api.zero-to-cloud-native.com:8000/api/v1/enableSSH/
 
+```
 {
-
-\"apikey\": \"\<IBM CLOUD API KEY\",
-
-\"cluster_name\": \"e.g. zero-to-cloud-native\"
-
+  "apikey": "<IBM CLOUD API KEY>",
+  "cluster_name": "e.g. zero-to-cloud-native"
 }
+```
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image14.png){width="6.5in"
-height="1.6868055555555554in"}
+generated](.//media/image14.png)
 
 After entering these settings, click Send. You will get output like the
 following:
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image15.png){width="6.5in"
-height="1.0756944444444445in"}
+generated](.//media/image15.png)
 
 Note, this API is long running ( \~10 seconds ). Following the CQRS
 Command microservices pattern, the output will indicate that the request
@@ -301,45 +269,48 @@ to the underlying worker node the pod is running on.
 Using **iTerm2**, log into your OpenShift cluster. Use the getToken API
 if you like! After logging in, run:
 
+```
 oc get pods -n kube-system
+```
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image16.png){width="4.625101706036745in"
-height="4.058823272090988in"}
+generated](.//media/image16.png)
 
 Note the nodes that start with inspect. You will see the pods follow the
-naming convention of inspectnode-\<cluster id\>-\<cluster
-name\>-\<worker pool\>-\<worker id\>.
+naming convention of:  
+ **inspectnode-\<cluster id\>-\<clustername\>-\<worker pool\>-\<worker id\>**
 
 Following this naming convention will allow us to easily identify which
 pod is associated with which worker node.
 
-Now let test it. Pick a pod and copy the pod name, I will choose
+Now let test it. Pick a pod and copy the pod name, I will choose  
 **inspectnode-6sqohaugmvg-zerotocloud-default-00000a63**
 
 Next, we are going to 'exec' in the pod by running this command. Make
 sure to use the name of the pod you just copied.
 
-kubectl exec -it inspectnode-6sqohaugmvg-zerotocloud-default-00000a63
-/bin/sh -n kube-system
+```
+kubectl exec -it inspectnode-6sqohaugmvg-zerotocloud-default-00000a63 /bin/sh -n kube-system
+```
 
 Your prompt should now change to **\#** ... indicating you are now
 connected inside the inspect pod.
 
 Next, to SSH in the worker node type:
 
+```
 ssh root\@localhost
+```
 
 You should see your prompt now change to something like this:
 
-\[root\@kube-bt2nhevd06sqohaugmvg-zerotocloud-default-00000a63 \~\]\#
+**\[root\@kube-bt2nhevd06sqohaugmvg-zerotocloud-default-00000a63 \~\]\#**
 
 Congratulations, you are now SSH'd into one of your worker nodes. BE
 CAREFUL!
 
 ![A screenshot of a cell phone Description automatically
-generated](.//media/image17.png){width="6.5in"
-height="0.9416666666666667in"}
+generated](.//media/image17.png)
 
 4 -- Testing the Web Application
 ================================
@@ -350,15 +321,13 @@ To do so navigate to:
 web.\<your domain\>. In my case web.zero-to-cloud-native.com
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image18.png){width="5.379562554680665in"
-height="3.439242125984252in"}
+generated](.//media/image18.png)
 
 Enter your apikey and cluster name for the Get OpenShift Token and
 Enable SSH APIs and click each api to execute the api and get a result.
 
 ![A screenshot of a social media post Description automatically
-generated](.//media/image19.png){width="5.259046369203849in"
-height="3.3065693350831147in"}
+generated](.//media/image19.png)
 
 5 -- Next Up
 ============

@@ -97,7 +97,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 **Part 9 - Deploying the Application**  
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9/9-deploy.md)  
-[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf).   
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9-deploying-the-application.pdf)    
 [Video](<https://youtu.be/JF7rxSHYX7U>)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
@@ -111,8 +111,8 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video]  **coming soon**
 
 **Part 9C - Finishing Deploying and Testing the Application**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/pc-finish.md)  
-[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative -part9C-Finish-deploying-testing.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9c/9c-finish.md)  
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-part9C-Finish-deploying-testing.pdf)  
 [Video](<https://youtu.be/EOzqCQhm7Bc>)
 
 ## Coming soon - Day 2 Operations
