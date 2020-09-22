@@ -80,7 +80,7 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video](<https://youtu.be/Npq3dAtMtI8>) 
 
 **Part 6 - Setting up a Cloud-Native Development Environment**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/6-dev.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/6/6-dev.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part6-setting-up-a-development-environment.pdf)  
 [Video](<https://youtu.be/kerMUm_1OsA>)  
 
