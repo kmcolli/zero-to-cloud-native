@@ -1,7 +1,9 @@
 Zero to Cloud-Native with IBM Cloud
 ===================================
+
 **Kevin Collins ( kevincollins@us.ibm.com )**  
 **Kunal Malhotra ( kunal.malhotra3@ibm.com )**
+
 Part 9: Deploying the Application 
 =================================
 
