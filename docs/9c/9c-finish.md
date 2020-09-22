@@ -312,7 +312,7 @@ CAREFUL!
 ![A screenshot of a cell phone Description automatically
 generated](.//media/image17.png)
 
-4 -- Testing the Web Application
+4 - Testing the Web Application
 ================================
 
 The last step we want to do is test the web frontend of the application.
@@ -329,7 +329,7 @@ Enable SSH APIs and click each api to execute the api and get a result.
 ![A screenshot of a social media post Description automatically
 generated](.//media/image19.png)
 
-5 -- Next Up
+5 - Next Up
 ============
 
 If you have made it this far, congratulations you have successfully
