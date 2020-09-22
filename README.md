@@ -85,7 +85,7 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video](<https://youtu.be/kerMUm_1OsA>)  
 
 **Part 7 - Preparing to Deploy**  
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/7-code.md)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/7/7-code.md)  
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part7-preparing-to-deploy.pdf)  
 [Video](<https://youtu.be/irAwcsY7mN8>) 
 

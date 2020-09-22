@@ -73,8 +73,7 @@ Next up, we are going to install Oh My Zsh. "Oh My Zsh which is an open source, 
 
 To Inall OhMyZsh run this command:  
 ```
-sh -c "$(curl -fsSL
-https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 #### 
 
