@@ -107,7 +107,8 @@ To support these APIs, the following microservices, all written in Python, will 
 [Video](<https://youtu.be/CrU5aHtQROc>)
 
 **Part 9B - Deploying with a Tekton Pipeline**  
-[Blog](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9B-creating-Tekton-Pipeline.pdf)  
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9b/9b-tekton.md)   
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/zero-to-cloud-native-part9b-tekton.pdf)  
 [Video]  **coming soon**
 
 **Part 9C - Finishing Deploying and Testing the Application**  
