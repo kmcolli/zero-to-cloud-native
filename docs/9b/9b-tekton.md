@@ -443,7 +443,7 @@ generated](.//media/image29.png)
   
   * **revision**            Git branch. e.g. dev
   
-  * **imageName**           Name of the complete image name such as: us.icr.io/zero-to-cloud-native/web-frontend-02cn
+  * **imageName**           Name of the complete image name such as: web-frontend-02cn
   
   * **deploymentFile**      deployments/deployment.yaml
 
