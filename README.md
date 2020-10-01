@@ -116,7 +116,10 @@ To support these APIs, the following microservices, all written in Python, will 
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/ZeroToCloudNative-part9C-Finish-deploying-testing.pdf)  
 [Video](<https://youtu.be/EOzqCQhm7Bc>)
 
-#Day 2 Operations
+
+
+# Day 2 Operations  
+
 **Part 10 - Log Analysis with LogDNA**  
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10/10-logging.md)   
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/10/ZeroToCloudNative-10-Logging.pdf)  
