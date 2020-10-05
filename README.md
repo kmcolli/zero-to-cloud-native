@@ -123,7 +123,7 @@ To support these APIs, the following microservices, all written in Python, will 
 **Part 10 - Log Analysis with LogDNA**  
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10/10-logging.md)   
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/10/ZeroToCloudNative-10-Logging.pdf)  
-[Video](<https://youtu.be/RjgdxSptl4Y)
+[Video](<https://youtu.be/RjgdxSptl4Y>)  
 
 **Part 10A - Exporting Logs**  
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10A/10A-export-logs.md)   
