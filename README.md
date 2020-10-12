@@ -134,7 +134,7 @@ To support these APIs, the following microservices, all written in Python, will 
 * coming soon
 
 
-**Part 12 - Updating OpenShift Worker and Master Nodes**
+**Part 12 - Updating OpenShift Worker and Master Nodes**  
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/12/12-update-openshift.md)   
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/12/ZeroToCloudNative-12-UpdateOpenShift.pdf)  
 [Video](<https://youtu.be/k2PpvsWZ7BE>) 
