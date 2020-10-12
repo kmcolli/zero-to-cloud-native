@@ -130,8 +130,15 @@ To support these APIs, the following microservices, all written in Python, will 
 [PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/10A/ZeroToCloudNative-10A-ExportLogs.pdf)  
 [Video](<https://youtu.be/Vzo6uFfUtdY>)  
 
+**Part 11 - Monitoring with SysDig**  
+* coming soon
 
-* **Monitoring**
+
+**Part 12 - Updating OpenShift Worker and Master Nodes**
+[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/12/12-update-openshift.md)   
+[PDF](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/12/ZeroToCloudNative-12-UpdateOpenShift.pdf)  
+[Video](<https://youtu.be/k2PpvsWZ7BE>) 
+
 * **Automating with Terraform**
 * **RedHat Service Mesh**
 * **Deploying to a remote location with IBM Cloud Satellite**
