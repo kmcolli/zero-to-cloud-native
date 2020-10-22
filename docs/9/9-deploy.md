@@ -329,7 +329,7 @@ Typically, I would recommend to deploy each microservice with a CI/CD
 pipeline which I will go through in the next section. However, it is
 useful to understand how to deploy manually.
 
-These instructions will show how to manually deploy the API Frontend
+These instructions will show how to manually deploy the Utility
 microservice and then you will create a CI/CD pipeline to automate the
 build and deployment of your microservices.
 
@@ -345,11 +345,11 @@ image name. You will need to change the text in the bluebox to the
 container registry namespace you created in Part 7 of this series.
 
 Start **iTerm2** and navigate to the directory where your
-**api-frontend-02cn** is located.
+**utility-02cn** is located.
 
 The first step we will need to do is build the docker container. Run the
 following docker command which will build a docker image for the
-**api-frontend-02cn** microservice with a tag of v1.
+**utility-02cn** microservice with a tag of v1.
 
 ```
 docker build -t us.icr.io/**zero-to-cloud-native**/api-frontend-02cn:v1 .
@@ -364,7 +364,7 @@ Next, we need to push the docker image we just created to the container
 registry service. To do so, run the following command:
 
 ```
-docker push us.icr.io/**zero-to-cloud-native**/api-frontend-02cn:v1
+docker push us.icr.io/zero-to-cloud-native/utility-02cn:v1
 ```
 
 Again, change the bolded text ***zero-to-cloud-native*** to your
@@ -385,7 +385,7 @@ sure the deployment and pod were successfully deployed, run the
 following command:
 
 ```
-oc get pods
+oc get pods | grep utility
 ```
 
 and you should see that your api frontend pod is running:
