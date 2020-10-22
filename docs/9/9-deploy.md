@@ -352,7 +352,7 @@ following docker command which will build a docker image for the
 **utility-02cn** microservice with a tag of v1.
 
 ```
-docker build -t us.icr.io/**zero-to-cloud-native**/api-frontend-02cn:v1 .
+docker build -t us.icr.io/**zero-to-cloud-native**/utility-02cn:v1 .
 ```
 Change the bolded text ***zero-to-cloud-native*** to your container
 registry namespace. Don't forget the period at the end which indicates
