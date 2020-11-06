@@ -273,7 +273,7 @@ The first one is the IBM Cloud CLI. Install the IBM Cloud CLI with this
 command.
 
 ```
-curl -fsSL https://clis.cloud.ibm.com/install/osx \| sh
+curl -fsSL https://clis.cloud.ibm.com/install/osx | sh
 ```
 
 Next, you will need to install two frequently used plugins for IBM's
