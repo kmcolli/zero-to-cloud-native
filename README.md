@@ -67,163 +67,114 @@ To support these APIs, the following microservices, all written in Python, will 
 ***
 
 
-###**Part 2 Microservices Architecture and Design**  
+###  **Part 2 Microservices Architecture and Design**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/2/2-microservices.md)  
 
 [![Part 1](http://img.youtube.com/vi/UGyIlZfHYok/0.jpg)](https://youtu.be/UGyIlZfHYok)
 
 ***
 
-###**Part 3 - Network and Security Configuration**  
+###  **Part 3 - Network and Security Configuration**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/3/3-network.md)  
 
 [![Part 1](http://img.youtube.com/vi/xBCjiH0Ud1g/0.jpg)](https://youtu.be/xBCjiH0Ud1g)
 
 ***
----
 
-###**Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
 
----
-
+###  **Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/4/4-openshift.md)  
 
 [![Part 1](http://img.youtube.com/vi/2oCHWzLPq3M/0.jpg)](https://youtu.be/2oCHWzLPq3M)
 
 ***
----
 
-###**Part 5 - IBM Cloud Databases and Messaging**  
 
----
-
+###  **Part 5 - IBM Cloud Databases and Messaging**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/5/5-dbaas.md)  
 
 [![Part 1](http://img.youtube.com/vi/Npq3dAtMtI8/0.jpg)](https://youtu.be/Npq3dAtMtI8)
 
 ***
----
 
-###**Part 6 - Setting up a Cloud-Native Development Environment**  
 
----
-
+###  **Part 6 - Setting up a Cloud-Native Development Environment**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/6/6-dev.md)  
 
 [![Part 1](http://img.youtube.com/vi/kerMUm_1OsA/0.jpg)](https://youtu.be/kerMUm_1OsA)
 
 ***
----
 
-###**Part 7 - Preparing to Deploy**  
-
---
-
+###  **Part 7 - Preparing to Deploy**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/7/7-code.md)  
 
 [![Part 1](http://img.youtube.com/vi/irAwcsY7mN8/0.jpg)](https://youtu.be/irAwcsY7mN8)
 
 ***
----
 
-###**Part 8 - Cloning and Importing the Code Base**    
-
---
-
+###  **Part 8 - Cloning and Importing the Code Base**    
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/8/8-codebase.md)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part8-presentation.pdf)
 
 [![Part 1](http://img.youtube.com/vi/61t1548B6UQ/0.jpg)](https://youtu.be/61t1548B6UQ)
 
 ***
----
 
-###**Part 9 - Deploying the Application**  
-
----
-
+###  **Part 9 - Deploying the Application**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9/9-deploy.md)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
 
 [![Part 1](http://img.youtube.com/vi/JF7rxSHYX7U/0.jpg)](https://youtu.be/JF7rxSHYX7U)
 
 ***
----
 
-###**Part 9A - Deploying with a 'Classic' Pipeline**  
-
----
-
-[Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9a/9a-classic.md)  
+###  **Part 9A - Deploying with a 'Classic' Pipeline**  
+[Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9a/9a-classic.md)  
 
 [![Part 9A](http://img.youtube.com/vi/CrU5aHtQROc/0.jpg)](https://youtu.be/CrU5aHtQROc)
 
 ***
----
 
-###**Part 9B - Deploying with a Tekton Pipeline**  
-
----
-
+###  **Part 9B - Deploying with a Tekton Pipeline**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9b/9b-tekton.md)   
 
 [Video]  **coming soon**
 
 ***
----
 
-###**Part 9C - Finishing Deploying and Testing the Application**  
 
----
-
+###  **Part 9C - Finishing Deploying and Testing the Application**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9c/9c-finish.md)  
 
 [![Part 1](http://img.youtube.com/vi/EOzqCQhm7Bc/0.jpg)](https://youtu.be/EOzqCQhm7Bc)
 
 ***
---- 
-
 
 # Day 2 Operations  
 
-###**Part 10 - Log Analysis with LogDNA**  
-
----
-
+###  **Part 10 - Log Analysis with LogDNA**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10/10-logging.md)   
 
 [![Part 1](http://img.youtube.com/vi/RjgdxSptl4Y/0.jpg)](https://youtu.be/RjgdxSptl4Y)
 
-#______________________________________________________________
 
 ***
----
 
-###**Part 10A - Exporting Logs**  
-
----
-
+###  **Part 10A - Exporting Logs**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10A/10A-export-logs.md)   
 
 [![Part 1](http://img.youtube.com/vi/Vzo6uFfUtdY/0.jpg)](https://youtu.be/Vzo6uFfUtdY)
 
 ***
----
 
-###**Part 11 - Monitoring with SysDig**  
 
----
-
+###  **Part 11 - Monitoring with SysDig**  
 * coming soon
 
 
 ***
-***
 
-###**Part 12 - Updating OpenShift Worker and Master Nodes**  
-
----
-
+###  **Part 12 - Updating OpenShift Worker and Master Nodes**  
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/12/12-update-openshift.md)   
 
 [![Part 1](http://img.youtube.com/vi/k2PpvsWZ7BE/0.jpg)](https://youtu.be/k2PpvsWZ7BE)
