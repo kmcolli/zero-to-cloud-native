@@ -67,22 +67,22 @@ To support these APIs, the following microservices, all written in Python, will 
 [![Part 1](http://img.youtube.com/vi/Eta09EJ5bvY/0.jpg)](https://youtu.be/Eta09EJ5bvY)
 
 ***
----
+--
 
 ###**Part 2 Microservices Architecture and Design**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/2/2-microservices.md)  
 
 [![Part 1](http://img.youtube.com/vi/UGyIlZfHYok/0.jpg)](https://youtu.be/UGyIlZfHYok)
 
 ***
---- 
+-- 
 
 ###**Part 3 - Network and Security Configuration**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/3/3-network.md)  
 
@@ -93,7 +93,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 4 - RedHat OpenShift on IBM Cloud Setup and Configuration**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/4/4-openshift.md)  
 
@@ -104,7 +104,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 5 - IBM Cloud Databases and Messaging**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/5/5-dbaas.md)  
 
@@ -115,7 +115,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 6 - Setting up a Cloud-Native Development Environment**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/6/6-dev.md)  
 
@@ -149,7 +149,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 9 - Deploying the Application**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9/9-deploy.md)  
 [Presentation](https://raw.githubusercontent.com/kmcolli/zero-to-cloud-native/master/docs/part9-presentation.pdf) 
@@ -161,7 +161,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 9A - Deploying with a 'Classic' Pipeline**  
 
---
+---
 
 [Blog](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9a/9a-classic.md)  
 
@@ -172,7 +172,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 9B - Deploying with a Tekton Pipeline**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9b/9b-tekton.md)   
 
@@ -183,7 +183,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 9C - Finishing Deploying and Testing the Application**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/9c/9c-finish.md)  
 
@@ -197,7 +197,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 10 - Log Analysis with LogDNA**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10/10-logging.md)   
 
@@ -210,7 +210,7 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 10A - Exporting Logs**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/10A/10A-export-logs.md)   
 
@@ -221,17 +221,17 @@ To support these APIs, the following microservices, all written in Python, will 
 
 ###**Part 11 - Monitoring with SysDig**  
 
---
+---
 
 * coming soon
 
 
 ***
---- 
+***
 
 ###**Part 12 - Updating OpenShift Worker and Master Nodes**  
 
---
+---
 
 [Tutorial](https://github.com/kmcolli/zero-to-cloud-native/blob/master/docs/12/12-update-openshift.md)   
 
