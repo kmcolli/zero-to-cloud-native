@@ -1,0 +1,689 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
+    
+    
+      
+        <title>Vpn - IBM Cloud Satellite Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-a-openvpn-server-and-client-to-connect-to-a-private-network" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-header__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Cloud Satellite Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vpn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-nav__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Satellite Tutorials
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Satellite/satellite.md" class="md-nav__link">
+        Deploy Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CP4D/satellite-cp4d.md" class="md-nav__link">
+        CP4D on Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LB/satellite-lb.md" class="md-nav__link">
+        Expose an Application with a Load Balancer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPC/vpc.md" class="md-nav__link">
+        Create VPC Infrastructure for Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/vpn.md" class="md-nav__link">
+        Connect a private location with VPN
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="create-a-openvpn-server-and-client-to-connect-to-a-private-network">Create a OpenVPN Server and Client To Connect to a Private Network</h1>
+<p><strong>Kevin Collins ( kevincollins@us.ibm.com )</strong><br />
+<strong>Kunal Malhotra ( kunal.malhotra3@ibm.com )</strong></p>
+<h1 id="1-introduction">1 - Introduction</h1>
+<p>In this section, we will be setting up an OpenVPN connection to connect
+to our private only satellite cluster that is running on a private only
+VPC. By deploying your cluster on a private only cluster adds in an
+additional layer of security and in the case of this tutorial series
+offers a more realistic scenario in deploying to a remote satellite
+location.</p>
+<p>In order to setup this VPN connection, we will need to deploy both a
+server and a client. For the server, we will deploy a 'jump server' VSI
+in our zero to cloud native VPC and then use your workstation as the
+client.</p>
+<h1 id="2-vpn-server">2 - VPN Server</h1>
+<p>As a reference, this guide will follow the basic instructions below,
+however there are a couple of different settings that you will need in
+place to work on your virtual private cloud.</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-7">https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-7</a></p>
+<p>To get started, the first thing we will do is provision a VSI for our
+VPN Server.</p>
+<h2 id="21-provision-vpc-infrastructure">2.1 Provision VPC Infrastructure</h2>
+<p>Start by navigating to VPC Infrastructure and then select VPC Instances.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image1.png" /></p>
+<p>On the next screen, click on Create to create a new VPC Instance.</p>
+<p><img alt="" src="../media/image2.png" /></p>
+<p>Enter the following settings on the next screen:</p>
+<p>Name: <strong>vpn-02cn</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 1</strong></p>
+<p>Operating System: <strong>Ubuntu Linux 16.04 LTS</strong></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image3.png" /></p>
+<p>In the profile section, select Balanced bx2-4x16 and make sure to select
+your SSH Key.</p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image4.png" /></p>
+<p>In the networking section, select
+<strong>zero-to-cloud-native-satellite-vpc</strong>.</p>
+<p><img alt="A picture containing text Description automatically
+generated" src="../media/image5.png" /></p>
+<p>Finally, on the right hand side of the screen, click on Create virtual
+server instance.</p>
+<p><img alt="Graphical user interface, text, application, chat or text message
+Description automatically
+generated" src="../media/image6.png" /></p>
+<p>Next, since this VSI will be our VPN Server, we need to give it a public
+IP. To do so, click on Floating IPs in VPC / Network menu.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image7.png" /></p>
+<p>On the next screen, click on Create to create a new floating IP.</p>
+<p><img alt="" src="../media/image8.png" /></p>
+<p>On the next screen, enter the following settings for the new floating
+IP.</p>
+<p>Name: <strong>vpn-02cn-ip</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 1</strong></p>
+<p>Instance to bind: <strong>vpn-02cn</strong></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image9.png" /></p>
+<p>After entering these settings, click on <strong>Reserve IP</strong>.</p>
+<p>Hover above the floating IP you just created and click <strong>Copy IP
+address</strong>. Keep track of this floating IP as we will need to throughout
+this tutorial.</p>
+<p><img alt="Graphical user interface Description automatically generated with
+medium confidence" src="../media/image10.png" /></p>
+<p>Now that we have a floating IP, we can SSH into the virtual server
+instance we created to setup our VPN connection.</p>
+<h2 id="22-configure-openvpn-server">2.2 Configure OpenVPN Server</h2>
+<p>Now that we have our VSI provisioned with a public IP, we can now start
+configuring it. Start your terminal and SSH into the VSI.</p>
+<pre><code>ssh -i ~/.ssh/kevincollins@us.ibm.com &lt;root@169.48.155.171&gt;
+</code></pre>
+<p>*note: make sure to select the location of your SSH key that we
+previously setup.</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image11.png" /></p>
+<h2 id="221-install-openvpn">2.2.1 Install OpenVPN</h2>
+<p>Next, we will install OpenVPN. Run the following commands from your
+terminal. For more background on each command, refer to the source here:</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04</a></p>
+<pre><code>sudo apt-get update
+
+sudo apt-get install openvpn easy-rsa
+
+make-cadir ~/openvpn-ca
+
+cd ~/openvpn-ca
+</code></pre>
+<p>The OpenVPN connection will be secured by certificates that we need to
+create. To create certificates, there are a number of variables that we
+need to set. To do so, you will need to edit a file called vars.</p>
+<pre><code>vi vars
+</code></pre>
+<p>Scroll down in the file and enter values as follows:</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image12.png" /></p>
+<p>*Note, this is informational only and you can add whatever you want
+here. After making the changes, save the file.</p>
+<p>Going back to configuring the OpenVPN server, enter these commands:</p>
+<pre><code>cd ~/openvpn-ca
+
+source vars
+
+./clean-all
+
+./build-ca
+</code></pre>
+<p>(Hit Enter to select all the default values )</p>
+<pre><code>./build-key-server server
+</code></pre>
+<p>(Hit Enter to select all the default values and hit 'y' twice to
+generate the certificate )</p>
+<pre><code>./build-dh
+
+openvpn --genkey --secret keys/ta.key
+
+
+source vars
+
+./build-key client1
+
+cd keys
+
+cp ca.crt server.crt server.key ta.key dh2048.pem /etc/openvpn
+
+gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz |
+sudo tee /etc/openvpn/server.conf
+</code></pre>
+<pre><code>vi /etc/openvpn/server.conf
+</code></pre>
+<p>Copy and paste the following into this file, make sure to enter the
+routes for your VPC, see below on how to do that.</p>
+<pre><code>#################################################
+# Sample OpenVPN 2.0 config file for            #
+# IBM VPC                                       #
+#################################################
+port 1194
+proto udp
+dev tun
+ca ca.crt
+cert server.crt
+key server.key  # This file should be kept secret
+dh dh2048.pem
+server 10.8.0.0 255.255.255.0
+ifconfig-pool-persist ipp.txt
+push &quot;dhcp-option DNS 8.8.8.8&quot;
+push &quot;dhcp-option DNS 8.8.4.4&quot;
+
+# update with routes from your VPC
+push &quot;route 10.240.0.0 255.255.192.0&quot;
+push &quot;route 10.240.64.0 255.255.192.0&quot;
+push &quot;route 10.240.128.0 255.255.192.0&quot;
+
+keepalive 10 120
+tls-auth ta.key 0 # This file is secret
+cipher AES-128-CBC   # AES
+auth SHA256
+comp-lzo
+user nobody
+group nogroup
+persist-key
+persist-tun
+status openvpn-status.log
+verb 3
+
+</code></pre>
+<p>In order for the OpenVPN client to be able to connect to your VPC, you
+will need to create routes. The first step is finding out what address
+prefixes you have in your VPC. To find this out, navigate to your VPC in
+IBM Cloud.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image13.png" /></p>
+<p>You will notice that there will be three prefixes, one for each location
+( dallas 1, dallas 2, dallas 3). These are the values you need to enter
+as a route in the server.conf file. In my case, I have these address
+prefixes:</p>
+<p>10.240.0.0/18</p>
+<p>10.240.64.0/18</p>
+<p>10.240.128.0/18</p>
+<p>You will need to convert the CIDR range to a netmask. If you followed
+the earlier instructions for creating a VPC then your subnets will end
+in /18 which has a subnet mask of 255.255.192.0.</p>
+<p>If you have a different CIDR range, then you will need to figure out
+what the netmask should be. The following website will help with that if
+needed.</p>
+<p>http://www.sput.nl/internet/cidr-routing.html</p>
+<p>In my VPC, this results in the following routes:</p>
+<pre><code>* push &quot;route 10.240.0.0 255.255.192.0&quot;
+
+push &quot;route 10.240.64.0 255.255.192.0&quot;
+
+push &quot;route 10.240.128.0 255.255.192.0&quot;
+</code></pre>
+<p>The next file we need to update is sysctl.conf.</p>
+<pre><code>vi /etc/sysctl.conf
+</code></pre>
+<p>Uncomment the following line:</p>
+<pre><code>net.ipv4.ip_forward = 1
+</code></pre>
+<pre><code>sudo sysctl -p
+
+ip route | grep default
+</code></pre>
+<p>Make note of the output, you will need to the interface name which comes
+after dev.</p>
+<p><img alt="" src="../media/image14.png" /></p>
+<p>In the case above, that is ens3.</p>
+<p>Now we need to edit another file for firewall rules</p>
+<pre><code>vi /etc/ufw/before.rules
+</code></pre>
+<p>Add these lines near the top:</p>
+<pre><code># START OPENVPN RULES
+
+# NAT table rules
+
+*nat
+
+:POSTROUTING ACCEPT [0:0]
+
+# Allow traffic from OpenVPN client to wlp11s0 (change to the interface
+# you discovered!)
+
+-A POSTROUTING -s 10.8.0.0/8 -o ens3 -j MASQUERADE
+
+COMMIT
+
+# END OPENVPN RULES
+</code></pre>
+<p>Make sure to change ens3 to the value you got in the previous step.</p>
+<p>Next, edit another file:</p>
+<pre><code>vi /etc/default/ufw
+</code></pre>
+<p>change DEFAULT_FORWARD_POLICY=\"ACCEPT\"</p>
+<p><img alt="" src="../media/image15.png" />
+Enter these commands to configure the firewall with the changes we just
+made:</p>
+<pre><code>sudo ufw allow 1194/udp
+
+sudo ufw allow OpenSSH
+
+sudo ufw disable
+
+sudo ufw enable
+
+sudo systemctl start openvpn@server
+
+sudo systemctl status openvpn@server
+
+mkdir -p ~/client-configs/files
+
+chmod 700 ~/client-configs/files
+
+cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/client-configs/base.conf
+
+vi ~/client-configs/base.conf
+</code></pre>
+<p>change the remote my-server-1 line to the floating IP of your VPN
+instance</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image16.png" /></p>
+<p>Uncomment the lines:</p>
+<pre><code>user nobody
+
+group nogroup
+</code></pre>
+<p><img alt="" src="../media/image17.png" />
+comment out the following lines:</p>
+<pre><code>#ca ca.crt
+
+#cert client.crt
+
+#key client.key
+</code></pre>
+<p><img alt="Text Description automatically
+generated" src="../media/image18.png" /></p>
+<p>In the cipher section, add these lines:</p>
+<pre><code>cipher AES-128-CBC
+
+auth SHA256
+
+key-direction 1
+</code></pre>
+<p><img alt="Text Description automatically
+generated" src="../media/image19.png" /></p>
+<p>Next create a file that your OpenVPN client will use and paste the
+following in it:</p>
+<pre><code>vi ~/client-configs/make_config.sh
+</code></pre>
+<pre><code>#!/bin/bash
+
+# First argument: Client identifier
+
+KEY_DIR=~/openvpn-ca/keys
+OUTPUT_DIR=~/client-configs/files
+BASE_CONFIG=~/client-configs/base.conf
+
+cat ${BASE_CONFIG} \
+    &lt;(echo -e '&lt;ca&gt;') \
+    ${KEY_DIR}/ca.crt \
+    &lt;(echo -e '&lt;/ca&gt;\n&lt;cert&gt;') \
+    ${KEY_DIR}/${1}.crt \
+    &lt;(echo -e '&lt;/cert&gt;\n&lt;key&gt;') \
+    ${KEY_DIR}/${1}.key \
+    &lt;(echo -e '&lt;/key&gt;\n&lt;tls-auth&gt;') \
+    ${KEY_DIR}/ta.key \
+    &lt;(echo -e '&lt;/tls-auth&gt;') \
+    &gt; ${OUTPUT_DIR}/${1}.ovpn
+
+</code></pre>
+<p>Change permissions of the file and run it:</p>
+<pre><code>chmod 700 ~/client-configs/make_config.sh
+
+cd ~/client-configs
+
+./make_config.sh client1
+</code></pre>
+<p>Finally, you made it, your OpenVPN server is complete! Exit out of the
+SSH session that is connected to your VPN VSI.</p>
+<h2 id="22-configure-openvpn-server_1">2.2 Configure OpenVPN Server</h2>
+<p>Back on your terminal to your local machine, we need to create an
+OpenVPN client. Start by copying the certificates you just created on
+your VPN server to your local machine.</p>
+<pre><code>mkdir vpn-02cn
+
+cd vpn-02cn
+</code></pre>
+<p>Next, copy the client file you created on the VPC VPN Instance to your
+local machine. Make sure to update the following command to use the
+public IP of your VPC VPN instance.</p>
+<pre><code>scp -i ~/.ssh/kevincollins@us.ibm.com root@169.48.152.73:/root/client-configs/files/client1.ovpn .
+</code></pre>
+<p>Next -- Install the OpenVPN client on your mac following these
+instructions:</p>
+<p><a href="https://openvpn.net/vpn-server-resources/installation-guide-for-openvpn-connect-client-on-macos/">https://openvpn.net/vpn-server-resources/installation-guide-for-openvpn-connect-client-on-macos/</a></p>
+<p>After installing OpenVPN Client, start it.</p>
+<p>Click on File, then select the client.ovpn file you just created.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image20.png" /></p>
+<p>After you connect, your VPN service should look like the following:</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image21.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
+      
+    
+  </body>
+</html>

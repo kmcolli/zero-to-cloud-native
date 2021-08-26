@@ -1,0 +1,904 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
+    
+    
+      
+        <title>Vpc - IBM Cloud Satellite Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploy-satellite-infrastructure-on-ibm-cloud-vpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-header__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Cloud Satellite Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vpc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-nav__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Satellite Tutorials
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Satellite/satellite.md" class="md-nav__link">
+        Deploy Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CP4D/satellite-cp4d.md" class="md-nav__link">
+        CP4D on Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LB/satellite-lb.md" class="md-nav__link">
+        Expose an Application with a Load Balancer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPC/vpc.md" class="md-nav__link">
+        Create VPC Infrastructure for Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/vpn.md" class="md-nav__link">
+        Connect a private location with VPN
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="deploy-satellite-infrastructure-on-ibm-cloud-vpc">Deploy Satellite Infrastructure on IBM Cloud VPC</h1>
+<p><strong>Kevin Collins ( kevincollins@us.ibm.com )</strong><br />
+<strong>Kunal Malhotra ( kunal.malhotra3@ibm.com )</strong></p>
+<h1 id="1-introduction">1 - Introduction</h1>
+<p>As you learned in the previous section, IBM Cloud Satellite can be
+deployed anywhere that you want from onPrem, to a cloud provider such as
+AWS, Azure, GCP, to the edge, or even on IBM Cloud. The instructions
+here will show you how to provision infrastructure on IBM Cloud VPC.
+While certain other options and providers will have different
+instructions the same concepts will apply. To simulate a more realistic
+environment, we will be deploying a private only Virtual Private Cloud
+with no Internet Connectivity.</p>
+<h1 id="2-provision-ibm-cloud-virtual-private-cloud">2 -- Provision IBM Cloud Virtual Private Cloud</h1>
+<h2 id="21-edit-attach-host-scripts">2.1 Edit Attach Host Scripts</h2>
+<p>In Section 14, when you first created your satellite location, you
+downloaded two 'attachHosts' scripts. These attachHost scripts are what
+tells IBM Cloud Satellite to use these hosts in your Satellite location.
+Before the attach host script can be ran, we need to run two commands on
+each instance to ensure the correct RedHat packages are installed. To
+automate running these scripts when the attach host script is ran, we
+need to edit both attach host scripts to include these commands.</p>
+<p>Open you code editor and open either attachHost file you downloaded.</p>
+<p>Look in the file for a line that starts with <strong>API_URL</strong> and add the
+following three lines of code:</p>
+<pre><code># enabling dependencies required by satellite
+
+subscription-manager refresh
+
+subscription-manager repos --enable=*
+</code></pre>
+<p><img alt="Text Description automatically
+generated" src="../media/image1.png" /></p>
+<p>Repeat the same steps for the other attachHost file.</p>
+<h2 id="22-create-a-vpc-infrastructure-for-the-satellite-control-plane">2.2 Create a VPC Infrastructure for the Satellite Control Plane</h2>
+<p>From your IBM Cloud menu, navigate to VPC Infrastructure and then select
+VPCs.</p>
+<p><img alt="Graphical user interface, application, email Description automatically
+generated" src="../media/image2.png" /></p>
+<p>To simulate a remote location, we will be creating a new private only
+VPC meaning there will be no connectivity outside of our VPC. From the
+Virtual Private Cloud page, click Create.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image3.png" /></p>
+<p>Enter a name of the VPC, I will be using
+<strong>zero-to-cloud-native-satellite-vpc</strong> and select your
+<strong>zero-to-cloud-native</strong> resource group.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image4.png" /></p>
+<p>Keep the remaining default settings and scroll down to New subnet for
+VPC.</p>
+<p>We will be created a multizone region across Dallas for our Satellite
+location. This means we will need to create a subnet for each zone.
+Starting with Dallas 1, give your subnet a meaningful name so you can
+find it later; I will be using <strong>satellite-02cn-dal1</strong> and the
+<strong>zero-to-cloud-native</strong> resource group. Select <strong>Dallas1</strong> as the
+location.</p>
+<p><img alt="A picture containing application Description automatically
+generated" src="../media/image5.png" /></p>
+<p>Make sure to attach the Public Gateway attached. You can remove this
+later, but we need this enabled for setup and configuration.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image6.png" /></p>
+<p>Keep the remaining settings as-is and click <strong>Create virtual private
+cloud</strong>.</p>
+<p>Next up, we need to create the two other subnets in Dallas 2 and Dallas
+3 for our multizone location. To do so, from the IBM Cloud Menu under
+VPC Infrastructure, click on Subnets.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image7.png" /></p>
+<p>On the next screen, click Create.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image8.png" /></p>
+<p>Give you subnet for Dallas 2 a name, I will be using
+satellite-02cn-dal2, select the name of your virtual private cloud which
+should be zero-to-cloud-native-satellite-vpc, and the
+zero-to-cloud-native resource group. The location for this subnet should
+be Dallas 2. After entering all of these settings click on Create
+Subnet.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically generated" src="../media/image9.png" /></p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image6.png" /></p>
+<p>Repeat the same steps to create a final subnet in Dallas 3.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image10.png" />{width="6.5in" height="2.25in"}</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image6.png" /></p>
+<h1 id="3-create-vpc-infrastructure">3 Create VPC Infrastructure</h1>
+<p>The first step in creating your satellite location is to provision
+infrastructure that your satellite location will use. In this tutorial
+we will be provisioning infrastructure in a VPC for both the control
+plane and the worker nodes for our IBM Cloud Managed OpenShift cluster.</p>
+<h2 id="31-vpc-infrastructure-for-the-satellite-control-plane">3.1 VPC Infrastructure for the Satellite Control Plane</h2>
+<p>We will start by provisioning the VPC infrastructure for the control
+plane. You can view this control plane as the master nodes for the IBM
+Cloud Managed OpenShift cluster will be creating.</p>
+<h3 id="311-vpc-instancetemplate">3.1.1 VPC InstanceTemplate</h3>
+<p>Now that we have a virtual private cloud configured with subnets, we can
+add hosts for the Satellite control plane to our VPC. The best way to
+create these VPC instances is to use an Instance Template. A VPC
+instance template is used to define instance details for provisioning
+our virtual servers for the control plan. This will enable us to quickly
+create consistent images for our control plane.</p>
+<p>To create an instance template, from the IBM Cloud menu, under VPC
+Infrastructure, expand Auto scale and then select <strong>Instance
+templates</strong>.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image11.png" /></p>
+<p>On the next screen, click on <strong>Create</strong> to create your first instance
+template. We will be creating a template for each zone for our control
+plane. Starting with Dallas 1, give the template a meaningful name, I
+will use <strong>satellite-02cn-control-plane-dal1</strong>. Select your
+<strong>zero-to-cloud-native-satellite-vpc</strong> VPC and the <strong>zero-cloud-native</strong>
+resource group. This template will be for Dallas 1 so also select
+<strong>Dallas 1</strong> as the location.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image12.png" /></p>
+<p>For the Operating System, select <strong>7.x Minimal Install</strong> under <strong>Red Hat
+Enterprise Linux</strong>. For the machine profile, I will keep the default to
+<strong>8x32</strong>, but you could go down to 4x16 if you wish.</p>
+<p>If you already have a <strong>ssh key</strong> attached to your account, select it
+under SSH keys. If you don't have an SSH Key attached to your account,
+follow the next steps.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image13.png" /></p>
+<h3 id="3111-create-a-ssh-key">3.1.1.1 Create a SSH Key</h3>
+<p>If you don't have an SSH key associated with your IBM Cloud account,
+follow the steps below to create an SSH key and add it to your IBM Cloud
+account.</p>
+<p>Start your terminal and navigate to a directory where you want to store
+your SSH Key and run the following command.</p>
+<p><strong>ssh-keygen -m PEM -t rsa -f "\&lt;email address>"</strong></p>
+<p>Hit <strong>enter</strong> for no passphrase when prompted.</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image14.png" /></p>
+<p>Next, type cat the .pub file that was just created. The naming
+convention will be the email address you entered in the previous command
+plus '.pub'.</p>
+<p><strong>cat \&lt;email address>.pub</strong></p>
+<p><img alt="" src="../media/image15.png" /></p>
+<p><strong>Copy</strong> the entire output starting with ssh-rsa to your clipboard. Back
+in your browser, click <strong>New key</strong>.</p>
+<p><img alt="" src="../media/image16.png" /></p>
+<p>On the next screen, give a name for your key such as
+<strong>ssh-key-\&lt;initials>.</strong> Select the <strong>zero-to-cloud-native</strong> resource
+group and <strong>Dallas</strong> the Region. Paste in the key you just copied in the
+Public key field and then click on <strong>Add SSH key</strong>.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image17.png" /></p>
+<h4 id="3112-create-the-instance-template">3.1.1.2 Create the Instance Template</h4>
+<p>Back to creating a new Instance Template. We need to include the attach
+host files that we downloaded and edited in section 2. To include this
+file on our instance images, click on <strong>Import user data</strong>.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image18.png" /></p>
+<p>On the next screen, select sat-host-check and
+attachHost-satellite-02cn-control-plane.sh.</p>
+<p><strong>*IMPORTANT</strong> -- make sure you followed the instructions in section
+2.2 Edit Attach Host Scripts before importing this file.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image19.png" /></p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image20.png" /></p>
+<p>Next, we will create the same instance templates for the Satellite
+control plane for Dallas 2 and Dallas 3 locations.</p>
+<p><strong>Dallas 2 Instance Template:</strong></p>
+<p>The instance template for Dallas 2 should look exactly like the template
+for Dallas 1. To create the same template for Dallas 2, click on three
+dots next to the Dallas 1 template and select Duplicate.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image21.png" /></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image22.png" /></p>
+<p>Make sure to enter the following settings:</p>
+<p>Name: <strong>satellite-02cn-control-plane-dal2</strong></p>
+<p>Virtual Private Cloud: <strong>zero-to-cloud-native-satellite-vpc</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 2</strong></p>
+<p>User Data <strong>-- import attachHost... control-plane</strong></p>
+<p><strong>Dallas 3 Instance Template:</strong></p>
+<p>Follow the same steps and duplicate either the Dallas 1 or Dallas 2
+control plane template and make sure to enter the following settings:</p>
+<p>Name: <strong>satellite-02cn-control-plane-dal3</strong></p>
+<p>Virtual Private Cloud: <strong>zero-to-cloud-native-satellite-vpc</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 3</strong></p>
+<p>User Data <strong>-- import attachHost... control-plane</strong></p>
+<h3 id="_1"></h3>
+<h3 id="312-vpc-instance-group-for-the-control-plane">3.1.2 VPC Instance Group for the control plane</h3>
+<p>Now that we have our VPC Instance templates setup, we can now create an
+instance group based on the template. An instance group is a collection
+of like virtual server instances. You define how many instances to
+maintain in the group. You can set a static number of instances or
+choose to dynamically scale instances according to your requirements.
+Our instance group will allow us to scale the control plane using the
+same instance template we created in the previous step.</p>
+<p>To create a VPC instance group, click on Instance Groups under in the
+VPC Infrastructure menu under Auto Scale.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image23.png" /></p>
+<p>On the next screen, click Create.</p>
+<p><img alt="A picture containing table Description automatically
+generated" src="../media/image24.png" /></p>
+<p>We will be creating an instance group for each data center in our
+satellite location, Dallas 1, Dallas 2, and Dallas 3. Starting with
+Dallas 1, enter the following settings:</p>
+<p>Name: <strong>satellite-control-plane-dal1</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-control-plane</strong></p>
+<p>Note: it is very important to give a meaningful tag so we can tell all
+the different instances we have from one another. For example, if you
+have multiple clusters and multiple cloud services running in IBM Cloud
+tags can quickly identify instances from one another.</p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image25.png" /></p>
+<p>Next, select the instance template for this instance group. Since this
+is the instance group for Dallas 1, select with
+<strong>satellite-02cn-control-plane-dal1</strong> instance template. Likewise, for
+subnet, select the <strong>satellite-02cn-dal1</strong> subnet. Leave load balancer
+unchecked. We don't need a load balancer <strong>because ... KUNAL</strong>. Finally,
+select <strong>Static</strong> so the instance group will hold a set size. We need
+this <strong>because KUNAL</strong> ...</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image26.png" /></p>
+<p>The last thing we need to do is set the instance group size. For this
+tutorial, we will create 1 control plane master node in each data
+center. Select 1 for the intial size. For a production level system, you
+will want at least 2 hosts per zone.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image27.png" /></p>
+<p>After entering all of these settings, click that you agree to provision
+this virtual server and click Create instance group.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image28.png" /></p>
+<p>This will start provisioning a virtual machine based on the virtual
+instance template that we associated with this instance group, which is
+in Dallas 1.</p>
+<p>Next, we need to repeat the same steps for Dallas 2 and Dallas 3.</p>
+<p><strong>Dallas 2 Instance Group</strong></p>
+<p>Name: <strong>satellite-control-plane-dal2</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-control-plane</strong></p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image29.png" /></p>
+<p>Select the <strong>satellite-02cn-control-plane-dal2</strong> instance template and
+the <strong>satellite-02cn-dal2</strong> subnet.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image30.png" /></p>
+<p>As with Dallas 1, keep the instance group size to 1 and create the
+instance group.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image31.png" /></p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image32.png" /></p>
+<p>We now have infrastructure provisioned for the control plane in Dallas 1
+and Dallas 2, to finish provisioning all the infrastructure for the
+satellite control plane, repeat the same steps for Dallas 3.</p>
+<p><strong>\
+</strong></p>
+<p><strong>Dallas 3 Instance Group</strong></p>
+<p>Name: <strong>satellite-control-plane-dal3</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-control-plane</strong></p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image33.png" /></p>
+<p>Select the <strong>satellite-02cn-control-plane-dal3</strong> instance template and
+the <strong>satellite-02cn-dal3</strong> subnet.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image34.png" /></p>
+<p>keep the instance group size to 1 and create the instance group.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image35.png" /></p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image32.png" /></p>
+<p>This completes provisioning the VPC infrastructure for our satellite
+control plane.</p>
+<h2 id="32-vpc-infrastructure-for-the-satellite-ibm-cloud-managed-openshift-worker-nodes">3.2 VPC Infrastructure for the Satellite IBM Cloud Managed OpenShift Worker Nodes</h2>
+<p>Now that we have our control plane infrastructure provisioned, we can
+move on to provisioning our infrastructure for our IBM Cloud Managed
+OpenShift worker nodes. We will be following the same process to create
+infrastructure as we did for the control plane. As a reminder, we will
+be deploying a multizone cluster across Dallas 1, Dallas 2, and Dallas 3
+with 2 worker nodes in each zone.</p>
+<h3 id="321-roks-vpc-infrastructure-instance-template">3.2.1 ROKS VPC Infrastructure Instance Template</h3>
+<p>As we did with the control plane, we will be using instance templates to
+consistently build out like images for each of our worker nodes.</p>
+<h4 id="_2"></h4>
+<h4 id="3211-dallas-1-instance-template">3.2.1.1 Dallas 1 Instance Template</h4>
+<p>Starting with Dallas 1, from the VPC Infrastructure menu, select
+<strong>Instance Template</strong>.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image36.png" /></p>
+<p>On the next screen, click <strong>Create</strong>.</p>
+<p><img alt="A picture containing shape Description automatically
+generated" src="../media/image37.png" /></p>
+<p>Enter the following settings for the next Instance template.</p>
+<p>Name: <strong>satellite-02cn-worker-dal1</strong></p>
+<p>Virtual Private Cloud: <strong>zero-to-cloud-native-satellite-vpc</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 1</strong></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image38.png" /></p>
+<p>In the Operating System Section, select <strong>Red Hat Enterprise Linux 7.x
+Minimal Install</strong>. For the flavor we are going to go with <strong>16x64</strong>
+worker nodes. To change the profile, click on View all profiles.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image39.png" /></p>
+<p>On the profiles screen, select 16x64 and click Save.</p>
+<p><img alt="Table Description automatically
+generated" src="../media/image40.png" /></p>
+<p>We need to include the attach host files that we downloaded and edited.
+To include this file on our instance images, click on <strong>Import user
+data</strong>.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image18.png" /></p>
+<p>On the next screen, select sat-host-check and
+<strong>attachHost-satellite-02cn-worker.sh</strong>.</p>
+<p><strong>*IMPORTANT</strong> -- make sure you followed the instructions in section
+2.2 Edit Attach Host Scripts before importing this file.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image41.png" /></p>
+<p>Finally, click Create instance template.</p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image42.png" /></p>
+<h4 id="3212-dallas-2-instance-template">3.2.1.2 Dallas 2 Instance Template</h4>
+<p>Follow the same steps to create the same instance template for Dallas 2.
+To save time, you can copy the instance template for the Dallas 1 worker
+and modify the settings.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image43.png" /></p>
+<p><img alt="A picture containing shape Description automatically
+generated" src="../media/image37.png" /></p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image44.png" /></p>
+<p>Enter the following settings for the next Instance template.</p>
+<p>Name: <strong>satellite-02cn-worker-dal2</strong></p>
+<p>Virtual Private Cloud: <strong>zero-to-cloud-native-satellite-vpc</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 2</strong></p>
+<p>In the Operating System Section, select <strong>Red Hat Enterprise Linux 7.x
+Minimal Install</strong>. For the flavor we are going to go with <strong>16x64</strong>
+worker nodes. To change the profile, click on View all profiles.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image39.png" /></p>
+<p>On the profiles screen, select <strong>16x64</strong> and click Save.</p>
+<p><img alt="Table Description automatically
+generated" src="../media/image40.png" /></p>
+<p>We need to include the attach host files that we downloaded and edited.
+To include this file on our instance images, click on <strong>Import user
+data</strong>.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image18.png" /></p>
+<p>On the next screen, select sat-host-check and
+<strong>attachHost-satellite-02cn-worker.sh</strong>.</p>
+<p><strong>*IMPORTANT</strong> -- make sure you followed the instructions in section
+2.2 Edit Attach Host Scripts before importing this file.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image41.png" /></p>
+<p>Finally, click Create instance template.</p>
+<p><img alt="Graphical user interface, text, application, Teams Description
+automatically
+generated" src="../media/image42.png" /></p>
+<h4 id="3213-dallas-3-instance-template">3.2.1.3 Dallas 3 Instance Template</h4>
+<p><img alt="A picture containing shape Description automatically
+generated" src="../media/image37.png" /></p>
+<p>Enter the following settings for the next Instance template.</p>
+<p>Name: <strong>satellite-02cn-worker-dal3</strong></p>
+<p>Virtual Private Cloud: <strong>zero-to-cloud-native-satellite-vpc</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Location: <strong>Dallas 3</strong></p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image45.png" /></p>
+<p>In the Operating System Section, select <strong>Red Hat Enterprise Linux 7.x
+Minimal Install</strong>. For the flavor we are going to go with <strong>16x64</strong>
+worker nodes. To change the profile, click on View all profiles.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image39.png" /></p>
+<p>On the profiles screen, select <strong>16x64</strong> and click Save.</p>
+<p><img alt="Table Description automatically
+generated" src="../media/image40.png" /></p>
+<p>We need to include the attach host files that we downloaded and edited.
+To include this file on our instance images, click on <strong>Import user
+data</strong>.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image18.png" /></p>
+<p>On the next screen, select sat-host-check and
+<strong>attachHost-satellite-02cn-worker.sh</strong>.</p>
+<p><strong>*IMPORTANT</strong> -- make sure you followed the instructions in section
+2.2 Edit Attach Host Scripts before importing this file.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image41.png" /></p>
+<p>Finally, click Create instance template.</p>
+<h3 id="322-roks-vpc-infrastructure-instance-group">3.2.2 ROKS VPC Infrastructure Instance Group</h3>
+<p>Now that we have instance templates for each zone, we need to create an
+instance group, just like we did for the control plane, so that we can
+quickly provision and scale multiple worker nodes at the same time.</p>
+<h4 id="3221-dallas-1-worker-node-instance-group">3.2.2.1 Dallas 1 Worker Node Instance Group</h4>
+<p>To create a new instance group template, click on Instance templates
+from the VPC Infrastructure menu.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image46.png" /></p>
+<p>From the Instance Group screen, click on Create.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image47.png" /></p>
+<p>Enter the following settings to create a new Instance Group for Dallas
+1.</p>
+<p>Name: <strong>satellite-02cn-workers-dal1</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-workers</strong></p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image48.png" /></p>
+<p>Under instance template, select the <strong>satellite-02cn-worker-dal1</strong>
+template.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image49.png" /></p>
+<p>Select the <strong>satellite-02cn-dal1</strong> Subnet. And Select Dynamic of the
+instance group scaling method.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image50.png" /></p>
+<p>For instance group size, select <strong>2 as the minimum</strong> and <strong>6 as the
+maximum</strong>. This means our cluster will have a minimum of at least 2
+worker nodes and will be able to scale to 6 based on the workload.</p>
+<p>Set the aggregation window to <strong>300 seconds</strong>. This means the scaling
+metrics will be scanned very 300 seconds.</p>
+<p>Set the cooldown period to <strong>3000 seconds</strong>. This is how many seconds
+scaling will pause after scaling so we don't scale unnecessarily.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image51.png" /></p>
+<p>Finally, click that you agree to provision the number of instances we
+have indicated, and click on Create instance group.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image52.png" /></p>
+<h4 id="3222-dallas-2-worker-node-instance-group">3.2.2.2 Dallas 2 Worker Node Instance Group</h4>
+<p>From the Instance Group screen, click on Create.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image47.png" /></p>
+<p>Enter the following settings to create a new Instance Group for Dallas2.</p>
+<p>Name: <strong>satellite-02cn-workers-dal2</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-workers</strong></p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image53.png" /></p>
+<p>Select the <strong>satellite-02cn-worker-dal2</strong> instance template</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image54.png" /></p>
+<p>For subnet, select the <strong>satellite-02cn-dal2</strong> subnet and select Dynamic
+for instance group scaling.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image55.png" /></p>
+<p>For instance group size, select <strong>2 as the minim</strong>um and <strong>6 as the
+maximum</strong>. This means our cluster will have a minimum of at least 2
+worker nodes and will be able to scale to 6 based on the workload.</p>
+<p>Set the aggregation window to 300 seconds. This means the scaling
+metrics will be scanned very 300 seconds.</p>
+<p>Set the cooldown period to 3000 seconds. This is how many seconds
+scaling will pause after scaling so we don't scale unnecessarily.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image51.png" /></p>
+<p>Finally, click that you agree to provision the number of instances we
+have indicated, and click on Create instance group.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image52.png" /></p>
+<h4 id="3223-dallas-3-worker-node-instance-group">3.2.2.3 Dallas 3 Worker Node Instance Group</h4>
+<p>From the Instance Group screen, click on Create.</p>
+<p><img alt="Background pattern Description automatically
+generated" src="../media/image47.png" /></p>
+<p>Enter the following settings to create a new Instance Group for Dallas
+3.</p>
+<p>Name: <strong>satellite-02cn-workers-dal3</strong></p>
+<p>Resource Group: <strong>zero-to-cloud-native</strong></p>
+<p>Tags: <strong>env:satellite-02cn-workers</strong></p>
+<p>Region: <strong>Dallas</strong></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image56.png" /></p>
+<p>Select the <strong>satellite-02cn-worker-dal3</strong> as the instance template.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image57.png" /></p>
+<p>Select the <strong>satellite-02cn-dal3</strong> subnet and keep <strong>Dynamic</strong> scaling
+checked.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image58.png" /></p>
+<p>For instance group size, select <strong>2 as the minim</strong>um and <strong>6 as the
+maximum</strong>. This means our cluster will have a minimum of at least 2
+worker nodes and will be able to scale to 6 based on the workload.</p>
+<p>Set the aggregation window to 300 seconds. This means the scaling
+metrics will be scanned very 300 seconds.</p>
+<p>Set the cooldown period to 3000 seconds. This is how many seconds
+scaling will pause after scaling so we don't scale unnecessarily.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image51.png" /></p>
+<p>Finally, click that you agree to provision the number of instances we
+have indicated, and click on Create instance group.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image52.png" /></p>
+<h2 id="33-vpc-security-group">3.3 VPC Security Group</h2>
+<p>Now that we have setup all our infrastructure, we need to setup our
+security group for the VPC to allow traffic into and out of our cluster.</p>
+<p>To modify the default security group, click on Security Groups under the
+VPC Infrastructure / Network menu.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image59.png" /></p>
+<p>You will find a default security group has been created for you. Look
+for the security group associated with your Virtual Private cloud and
+click on it.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image60.png" /></p>
+<p>On the screen, click on <strong>Manage rules</strong>.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image61.png" /></p>
+<p>We will be creating a number of Inbound rules. For outbound we will keep
+allow all for any protocol.</p>
+<p>To create a new inbound rule, click on create in the Inbound rules
+section.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image62.png" /></p>
+<p>Create an inbound rule to allow IBM Cloud to setup and manage your
+satellite location.</p>
+<p>Port min: <strong>30000</strong></p>
+<p>Port max: <strong>32767</strong></p>
+<p>Source Type: <strong>Any</strong></p>
+<p>Protocol: <strong>TCP</strong></p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image63.png" /></p>
+<p>Repeat the same steps for the following ports.</p>
+<p>Access for Red Hat OpenShift</p>
+<p>Protocol: <strong>UDP</strong></p>
+<p>Port min: <strong>3000</strong></p>
+<p>Port max: <strong>30767</strong></p>
+<p>Access the Red Hat OpenShift on IBM Cloud console</p>
+<p>Protocol: <strong>TCP</strong></p>
+<p>Port min: <strong>443</strong></p>
+<p>Port max: <strong>443</strong></p>
+<p>VPN Connection</p>
+<p>Protocol: <strong>UDP</strong></p>
+<p>Port min: <strong>1194</strong></p>
+<p>Port max: <strong>1194</strong></p>
+<p>Your security group should look like the following:</p>
+<p><img alt="Graphical user interface, table Description automatically generated
+with medium confidence" src="../media/image64.png" /></p>
+<p>Congratulations, you have now setup and configured VPC Infrastructure on
+IBM Cloud for your Satellite location!</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
+      
+    
+  </body>
+</html>

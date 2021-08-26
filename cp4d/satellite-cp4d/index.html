@@ -1,0 +1,761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
+    
+    
+      
+        <title>Satellite cp4d - IBM Cloud Satellite Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.be71726b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-cloud-pak-for-data-on-ibm-cloud-satellite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-header__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Cloud Satellite Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Satellite cp4d
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM Cloud Satellite Tutorials" class="md-nav__button md-logo" aria-label="IBM Cloud Satellite Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Satellite Tutorials
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Satellite/satellite.md" class="md-nav__link">
+        Deploy Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CP4D/satellite-cp4d.md" class="md-nav__link">
+        CP4D on Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LB/satellite-lb.md" class="md-nav__link">
+        Expose an Application with a Load Balancer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPC/vpc.md" class="md-nav__link">
+        Create VPC Infrastructure for Satellite
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VPN/vpn.md" class="md-nav__link">
+        Connect a private location with VPN
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="install-cloud-pak-for-data-on-ibm-cloud-satellite">Install Cloud Pak for Data on IBM Cloud Satellite</h1>
+<p><strong>Kevin Collins ( kevincollins@us.ibm.com )</strong><br />
+<strong>Kunal Malhotra ( kunal.malhotra3@ibm.com )</strong></p>
+<hr />
+<h1 id="1-introduction">1 - Introduction</h1>
+<p>In this section, we will be provisioning Cloud Pak for Data on our
+satellite location. One of the most important parts of Cloud Pak for
+Data is the storage that you will use in your cluster. To get the best
+performance for Cloud Pak for Data we will be creating Block storage in
+our VPC and then use Portworx Software Defined Storage, provisioned from
+the IBM Cloud Catalog, to handle the storage needs for Cloud Pak for
+Data.</p>
+<p>By default, when you create an IBM Cloud Managed OpenShift cluster on a
+Satellite location, the internal image registry is create using
+emptyDir. This means that images in your cluster will be stored locally
+on the image registry pod itself. If the pod goes down, you will lose
+your images. The reason this is initially created like this is to give
+you flexibility to use the backing of your choice for your image
+registry. With your satellite location being on prem, at the edge, or
+maybe a third-party cloud provider there are many options you can choose
+from meeting your business requirements. A great choice to use for an
+image registry is IBM Cloud Object Storage which we will setup to use as
+our image registry backing.</p>
+<h1 id="2-image-registry">2 - Image Registry</h1>
+<p>When you install Cloud Pak for Data, the installer is going to copy the
+images Cloud Pak for Data will use to your local image registry. This is
+done to greatly improve the speed of the installation process. The first
+thing we are going to do is create an IBM Cloud Object Storage instance
+and bucket. Note: if you already have an instance of IBM Cloud Object
+Storage you can skip to section 2.2</p>
+<h2 id="21-provision-ibm-cloud-object-storage">2.1 Provision IBM Cloud Object Storage</h2>
+<p>To provision IBM Cloud Object Storage, from the cloud.ibm.com portal,
+click on Catalog, search for Object Storage and then click on the Object
+Storage tile.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image1.png" /></p>
+<p>On the next screen, you will want to give the instance of IBM Cloud
+Object Storage a meaningful name, I will use <strong>Cloud Object
+Storage-Satellite</strong> and choose the resource group where your satellite
+resources are to location to keep things organized.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image2.png" /></p>
+<h2 id="22-create-a-bucket-for-your-image-repository">2.2 Create a Bucket for your Image Repository</h2>
+<p>The next thing we need to do, is create a bucket for our image registry.
+This bucket needs to have a couple specific settings so please make sure
+to closely follow the guide here.</p>
+<p>From your cloud object storage instance, click on Buckets and then
+Create bucket.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image3.png" /></p>
+<p>Next, click on Customize your bucket:</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image4.png" /></p>
+<p>On the next screen, name your bucket something meaningful, I will use
+<strong>sat-cluster-image-registry-kmc.</strong> Note: the name of your bucket must
+be unique in the region where you are creating it, so you may want to
+use your initials like I have.</p>
+<p>Select <strong>Regional</strong> for resiliency, Location: <strong>us-east</strong> and then
+<strong>standard</strong> as the storage class. Note: With the exception of location,
+this should be whatever region is closest to your satellite location, it
+is important to select the values exactly as indicated. After entering
+these settings, click on <strong>Create Bucket</strong>.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image5.png" /></p>
+<p>Now that we have created a bucket, the next step is to create Service
+Credentials so that our OpenShift cluster can talk to our instance of
+Cloud Object Storage to read and write images to the bucket we created.</p>
+<p>On the left-hand navigation pane, select <strong>Service Credentials</strong> and
+then click on <strong>New Credential</strong>.
+<img alt="" src="../media/image6.png" /></p>
+<p>On the next screen, give your credentials a meaningful name, I will
+choose <strong>Service-credentials-satellite-registry</strong>, role should be
+<strong>Write</strong> and turn on <strong>HMAC</strong>.</p>
+<p>On the next screen, note down the apikey for the Cloud Object Storage
+Instance, the Access Key and the Secret Access Key. Make sure not to
+share this with anyone ... by the time anyone reads these I will have
+deleted these keys.</p>
+<h1 id="23-configure-openshift-to-use-object-storage-for-the-image-registry">2.3 Configure OpenShift to use Object Storage for the Image Registry</h1>
+<p>Next, we need to create a secret for our image registry to talk to Cloud
+Object Storage. Start your terminal, log into IBM Cloud and your
+cluster.</p>
+<p>ibmcloud login --apikey=<your IBM Cloud API key> ... not the Object
+Storage API Key</p>
+<p>ibmcloud ks cluster config --cluster <cluster_name> --admin</p>
+<p>Change the following command to use</p>
+<p>oc create secret generic image-registry-private-configuration-user
+--from-literal=REGISTRY_STORAGE_S3_ACCESSKEY=<strong><YOUR COS ACCESS
+KEY></strong> --from-literal=REGISTRY_STORAGE_S3_SECRETKEY=<strong><YOUR COS
+SECRET KEY></strong> --namespace openshift-image-registry</p>
+<p><img alt="" src="../media/image7.png" />
+Now that we have our secret configured, we need to update the
+configuration of our image registry to point to the object storage
+instance and bucket we created.</p>
+<p>The easiest way to do this, is through the OpenShift web console. From
+cloud.ibm.com navigate to your satellite cluster and then click on
+OpenShift web console.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image8.png" /></p>
+<p>Once the OpenShift console opens, click on <strong>Search</strong>, search for
+'<strong>Config</strong>' and the click on the <strong>Config --
+imageregistry.operator.openshift.io</strong>...</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image9.png" /></p>
+<p>On the next screen, click on cluster.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically generated" src="../media/image10.png" /></p>
+<p>Click on YAML and then scroll down until you see this section:</p>
+<p>managementState: Removed</p>
+<p>proxy:</p>
+<p>http: ''</p>
+<p>https: ''</p>
+<p>noProxy: ''</p>
+<p>httpSecret:
+dAagViLyMeJodISdQpqcXtodpd6c6ojGyZeGEFnKTjhvpsalEs6vF33Hz5iSldS6</p>
+<p>storage: {}</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image11.png" /></p>
+<p>We need to make changes to the <strong>managementState</strong> and the <strong>storage</strong>
+lines.</p>
+<p>*Note -- when you make these changes, you may find you get a warning
+that object changed and you will need to reload it before you can make
+changes. You may need to try these a couple of times. One tip I found is
+change the managementState first and then go back and change storage.</p>
+<p>What you will need to do, is change managementState to Managed:</p>
+<p>managementState: Managed</p>
+<p>and under storage enter the following with your bucket name:</p>
+<p>storage:</p>
+<p>s3:</p>
+<p>bucket: sat-cluster-image-registry-kmc</p>
+<p>region: us-east-standard</p>
+<p>regionEndpoint:
+'https://s3.us-east.cloud-object-storage.appdomain.cloud'</p>
+<p>virtualHostedStyle: false</p>
+<p>After entering these settings, click Save and then Reload. You should
+see the YAML has been updated with the settings you entered.</p>
+<p>If you switch to the details page and scroll down, you should see a
+message that the S3 bucket exists:</p>
+<p><img alt="Graphical user interface, table Description automatically
+generated" src="../media/image12.png" /></p>
+<p>If you don't see this verify you entered your object storage secrets
+correctly and try to edit the config yaml again. If it fails again,
+delete the config and start over. When you delete the config, a new one
+will top up a couple of seconds later.</p>
+<p>One additional check we can do to make sure the image registry really is
+configured, is looking at the image registry pod.</p>
+<p>To find out if the registry is running as it should, click on
+<strong>Workload</strong> and the <strong>Pods</strong>. Under <strong>project</strong>, search for and select
+<strong>openshift-image-registry</strong> and click on the image-registry pod.</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../media/image13.png" /></p>
+<p>On the next screen, click on the Environment tab make sure you see that
+your object storage is indicated. If you don't see object storage values
+like below, then try updating the config again.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically
+generated" src="../media/image14.png" /></p>
+<h1 id="3-configure-storage">3 -- Configure Storage</h1>
+<h2 id="31-provision-block-storage">3.1 Provision Block Storage</h2>
+<p>Not surprisingly from the name, Cloud Pak for Data requires storage to
+store data to perform analytics among other things. With our cluster
+running on a Virtual Private Cloud, the best choice of storage is Block
+storage.</p>
+<p>To create block storage on IBM Cloud, from the VPC, click on
+<strong>Storage</strong>, <strong>Block storage volumes</strong> and then click <strong>Create</strong>.</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../media/image15.png" /></p>
+<p>We will need to create one block storage volume for each worker node.
+Starting with zone 1 worker 1, enter the following settings:</p>
+<p>Name: <strong>zone1-worker1-volume</strong></p>
+<p>Location: <strong>Dallas1</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image16.png" /></p>
+<p>Scrolling down further, under Volume <strong>profile</strong>, select <strong>Custom</strong> and
+then enter <strong>6000</strong> for IOPS and <strong>500</strong> for the size.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image17.png" /></p>
+<p>Finally, click Create Volume.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image18.png" /></p>
+<p>Repeat the same steps for all the other worker nodes.</p>
+<p>As a tip: you can also create these block volumes with the CLI using the
+following command:</p>
+<p>ibmcloud is volume-create zone2-worker1-vol custom us-south-2 --iops
+6000 --capacity 500</p>
+<h2 id="32-attach-the-block-volumes-to-your-instances">3.2 Attach the Block Volumes to your instances</h2>
+<p>Now that we have block volumes created for all our worker nodes we need
+to attach them. To attach the block volumes, from the VPC Menu, select
+Virtual Server Instances.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image19.png" /></p>
+<p>For each worker node instance, click on the name.<img alt="Table Description
+automatically generated" src="../media/image20.png" /></p>
+<p>Scroll down to the Storage volumes section and click on Attach.</p>
+<p><img alt="Graphical user interface Description automatically generated with
+medium confidence" src="../media/image21.png" /></p>
+<p>On the next screen, select the block volume for the corresponding
+Virtual Server Instance and click save.</p>
+<p><img alt="A picture containing application Description automatically
+generated" src="../media/image22.png" /></p>
+<p>Repeat the same process for the remaining worker nodes.</p>
+<h2 id="32-provision-portworx">3.2 Provision Portworx</h2>
+<p>The last step to prepare for Cloud Pak for Data installation is to
+provision an instance of portworx and since our cluster is a satellite
+cluster we can do this with the IBM Cloud Catalog. When you install
+portworx, you have two options to use for the portworx configuration.
+You can use either the internal kvdb that portworx provides or use an
+external etcd such as IBM Cloud Databases for etcd. From experience, I
+highly recommend to use an external etcd to use for you portworx kvdb.
+The reason for this is if you use the internal kvdb and you reload or
+replace one your worker nodes, your portworx configuration will fail.
+While you won't lose any data, you will have to go through a rather
+painful process of fixing your portworx configuration. It only takes
+about 5 extra minutes to setup an external etcd system and you get a
+piece of mind that your portworx configuration will be highly available
+and rock solid.</p>
+<h3 id="322-provision-ibm-cloud-databases-for-etcd">3.2.2 Provision IBM Cloud Databases for etcd</h3>
+<p>To install IBM Cloud Databases for etcd, from the cloud.ibm.com console,
+click on catalog, search for etcd and then click on the Databases for
+etcd tile.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image23.png" /></p>
+<p>The first thing we need to do is to specify a location for our IBM Cloud
+databases for etcd to run. For best performance, you will want to select
+the location that is nearest is your satellite location.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image24.png" /></p>
+<p>Next, we need to enter the following specific settings for etcd to
+support portworx.</p>
+<p>Start by giving your etcd instance a meaningful name, I will use
+Databases for etcd-px-satellite and choose the same resource group your
+cluster is in. Next, select the following options for etcd and then
+click <strong>Create</strong> to create the instance of etcd.</p>
+<ul>
+<li>
+<p><strong>Initial memory allocation:</strong> 8GB/member (24GB total)</p>
+</li>
+<li>
+<p><strong>Initial disk allocation:</strong> 128GB/member (384GB total)</p>
+</li>
+<li>
+<p><strong>Initial CPU allocation:</strong> 3 dedicated cores/member (9 cores total)</p>
+</li>
+<li>
+<p><strong>Database version:</strong> 3.3</p>
+</li>
+</ul>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image25.png" /></p>
+<p>The next think we need to do is generate service credentials for etcd so
+that portworx can use this etcd instance.</p>
+<p>After your instance is created it, click on it and the click on service
+credentials from the menu and finally click on New Credential.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image26.png" />{width="6.5in" height="3.43125in"}</p>
+<p>On the next screen, give your credentials a meaningful name, I will use
+<strong>Service Credentials-px-etcd</strong>.</p>
+<p><img alt="A picture containing chart Description automatically
+generated" src="../media/image27.png" /></p>
+<p>Next, we need to retrieve a couple of values from the service
+credentials we just created. The three values that we need to copy are:</p>
+<ul>
+<li>
+<p>certificate_base64</p>
+</li>
+<li>
+<p>username</p>
+</li>
+<li>
+<p>password</p>
+</li>
+</ul>
+<p><img alt="Graphical user interface, text, application, Word Description
+automatically generated" src="../media/image28.png" /></p>
+<p>We we are going to do is create a Kubernetes secret with these values.
+The certificate value we can us as-is. The username and password we will
+need to base64 encode. To do so, start your terminal and enter the
+following command:</p>
+<p>echo -n <username> | base64</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image29.png" /></p>
+<p>Repeat the same steps to base64 encode the password.</p>
+<p>Now that we have the values we need, we can create a Kubernetes secret
+with these values.</p>
+<p>Create a new file, I will just name it px-secrets.yaml with the values
+you just retrieved.</p>
+<p>apiVersion: v1</p>
+<p>kind: Secret</p>
+<p>metadata:</p>
+<p>name: px-etcd-certs</p>
+<p>namespace: kube-system</p>
+<p>type: Opaque</p>
+<p>data:</p>
+<p>ca.pem:
+"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUREekNDQWZlZ0F3SUJBZ0lKQU5FSDU4eTIva3pITUEwR0NTcUdTSWIzRFFFQkN3VUFNQjR4SERBYUJnTlYKQkFNTUUwbENUU0JEYkc5MVpDQkVZWFJoWW1GelpYTXdIaGNOTVRnd05qSTFNVFF5T1RBd1doY05Namd3TmpJeQpNVFF5T1RBd1dqQWVNUnd3R2dZRFZRUUREQk5KUWswZ1EyeHZkV1FnUkdGMFlXSmhjMlZ6TUlJQklqQU5CZ2txCmhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBOGxwYVFHemNGZEdxZU1sbXFqZmZNUHBJUWhxcGQ4cUoKUHIzYklrclhKYlRjSko5dUlja1NVY0NqdzRaL3JTZzhublQxM1NDY09sKzF0bys3a2RNaVU4cU9XS2ljZVlaNQp5K3laWWZDa0dhaVpWZmF6UUJtNDV6QnRGV3YrQUIvOGhmQ1RkTkY3Vlk0c3BhQTNvQkUyYVM3T0FOTlNSWlNLCnB3eTI0SVVnVWNJTEpXK21jdlc4MFZ4K0dYUmZEOVl0dDZQUkpnQmhZdVVCcGd6dm5nbUNNR0JuK2wyS05pU2YKd2VvdllEQ0Q2Vm5nbDIrNlc5UUZBRnRXWFdnRjNpRFFENW5sL240bXJpcE1TWDZVRy9uNjY1N3U3VERkZ2t2QQoxZUtJMkZMellLcG9LQmU1cmNuck03bkhnTmMvbkNkRXM1SmVjSGIxZEh2MVFmUG02cHpJeHdJREFRQUJvMUF3ClRqQWRCZ05WSFE0RUZnUVVLMytYWm8xd3lLcytERW9ZWGJIcnV3U3BYamd3SHdZRFZSMGpCQmd3Rm9BVUszK1gKWm8xd3lLcytERW9ZWGJIcnV3U3BYamd3REFZRFZSMFRCQVV3QXdFQi96QU5CZ2txaGtpRzl3MEJBUXNGQUFPQwpBUUVBSmY1ZHZselVwcWFpeDI2cUpFdXFGRzBJUDU3UVFJNVRDUko2WHQvc3VwUkhvNjNlRHZLdzh6Ujd0bFdRCmxWNVAwTjJ4d3VTbDlacUFKdDcvay8zWmVCK25Zd1BveU8zS3ZLdkFUdW5SdmxQQm40RldWWGVhUHNHKzdmaFMKcXNlam1reW9uWXc3N0hSekdPekpINFpnOFVONm1mcGJhV1NzeWFFeHZxa25DcDlTb1RRUDNENjdBeldxYjF6WQpkb3FxZ0dJWjJueENrcDUvRlh4Ri9UTWI1NXZ0ZVRRd2ZnQnk2MGpWVmtiRjdlVk9XQ3YwS2FOSFBGNWhycWJOCmkrM1hqSjcvcGVGM3hNdlRNb3kzNURjVDNFMlplU1Zqb3VaczE1Tzkwa0kzazJkYVMyT0hKQUJXMHZTajRuTHoKK1BRenAvQjljUW1PTzhkQ2UwNDlRM29hVUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCgo="</p>
+<p>username:
+"aWJtX2Nsb3VkX2UzNzcxNDZlXzE1MDZfNDdhZF9hZGFjX2JiMjI0YzlhMjViYQ=="</p>
+<p>password:
+"ZmQzZTljNDcwOTliM2EzOTliNDVmMGYyY2YwMGE5NTEzYjJmZTI0ZGI3NTVjODAwYjNmYw=="</p>
+<p>The last step we need to do before we install portworx is creating the
+secret in our cluster.</p>
+<p>After logging into your cluster from the command line, run:</p>
+<p>oc create -f px-secret.yaml</p>
+<h3 id="323-provision-portworx-from-the-ibm-cloud-catalog">3.2.3 Provision Portworx from the IBM Cloud Catalog</h3>
+<p>From the IBM Cloud console, click on Catalog, search for Portworx and
+then click on the Portworx Enterprise tile.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image30.png" /></p>
+<p>Start by selecting the region that is connected to your satellite
+location. I am using us-east Washington DC.</p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image31.png" />
+For pricing plan, choose the Enterprise plan.</p>
+<p>For setting, start by giving your portworx instance a meaningful name
+such as <strong>Portworx Enterprise-satellite</strong> and choose the same <strong>resource
+group</strong> you have been using for all your resources. Enter your cloud
+<strong>API key</strong> ( note: you need to enter this API key before you are able
+to select the cluster to install portworx in). Finally, in this section
+give a unique name for portworx cluster ( note this is not a kubernetes
+cluster but rather a portworx storage cluster that runs inside your
+openshift cluster ). I will use <strong>px-cluster.</strong></p>
+<p><img alt="Graphical user interface, application, Teams Description automatically
+generated" src="../media/image32.png" /></p>
+<p>Next, we need to get our endpoint for our etcd service. In a new window,
+navigate back to your service credentials for etcd instance and copy the
+endpoint.</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium confidence" src="../media/image33.png" /></p>
+<p>Enter the following settings:</p>
+<p>For etcd endpoint enter etcd:<endpoint you just copied></p>
+<p>Select the satellite cluster you want to install portworx on.</p>
+<p>For secret name, enter the name of the secret you created. If you
+followed my yaml example the secret name is px-etcd-certs</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically generated" src="../media/image34.png" /></p>
+<p>After entering all of these settings click on <strong>Create</strong>.</p>
+<h3 id="324-check-portworx-installation">3.2.4 Check Portworx installation</h3>
+<p>It is always a good idea to make sure portworx has been successfully
+installed on your cluster before you proceed. To do so, log into your
+cluster through your terminal.</p>
+<p>After logged in, change to the kube-system project.</p>
+<p>oc project kube-system</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image35.png" /></p>
+<p>Search for portworx pods and note the name of one the pods that starts
+with portworx...</p>
+<p><img alt="Text Description automatically
+generated" src="../media/image36.png" /></p>
+<p>Next enter the following command substituting the name of the portworx
+pod you just noted.</p>
+<p>kubectl exec portworx-7czms -it -n kube-system -- /opt/pwx/bin/pxctl
+status</p>
+<p><img alt="Graphical user interface Description automatically
+generated" src="../media/image37.png" /></p>
+<p>After entering that command, you should see output like the above. Check
+to make sure the status is online and that you have a storage node for
+each of your workers.</p>
+<h1 id="4-provision-cloud-pak-for-data">4 -- Provision Cloud Pak for Data</h1>
+<p>At this point, we have completed all the required pre-reqs to now
+install Cloud Pak for Data through the IBM Cloud Catalog.</p>
+<p>To get started, from the IBM Cloud catalog, search for Cloud Pak for
+Data and then click on the tile.</p>
+<p><img alt="Graphical user interface, application, website Description
+automatically generated" src="../media/image38.png" /></p>
+<p>On the next screen, select the satellite cluster you want to install
+Cloud Pak for Data on, and create a new project for cloud pak for data,
+I like to use cp4d.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image39.png" /></p>
+<p>Scroll down to the preinstallation section and click on Run Script. In a
+couple of minutes, you will see a green box showing the preinstallation
+script was successfully ran.</p>
+<p><img alt="Graphical user interface, text, application, email Description
+automatically generated" src="../media/image40.png" /></p>
+<p>Next, we need to specify which storage class to use. As you can probably
+guess, we will be using portworx.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image41.png" /></p>
+<p>The last step we need to do is specify which components of CloudPak for
+Data we want to install. I will select Data Visualization and Watson
+Knowledge Catalog.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image42.png" /></p>
+<p>Finally, the moment has come where we can kick of the installation. Read
+and confirm the license agreement and click install.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image43.png" /></p>
+<p>This will kick on an IBM Cloud Schematics installation process that
+depending on the components of Cloud Pak for Data you selected, will
+complete in about an hour.</p>
+<h1 id="5-validating-cloud-pak-for-data-installation">5 -- Validating Cloud Pak for Data Installation</h1>
+<p>The first thing to check is did the schematics installation report that
+it was successful. To check this, navigate to schematics and then
+workspaces from the IBM Cloud console.</p>
+<p><img alt="A picture containing text, screenshot, monitor Description
+automatically generated" src="../media/image44.png" /></p>
+<p>Look for a workspace named ibm-cp-datacore ... and verify the state is
+active with a green circle.</p>
+<p>The last thing to check is can you launch the Cloud Pak for Data
+console. From the IBM Cloud console, navigate to your list of clusters
+and click on the satellite cluster that you installed CloudPak for Data
+on. Then click on Openshift web console.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image45.png" /></p>
+<p>From the OpenShift console, click on Networking and then Routes. Select
+the CP4D project and you should see a route like below.</p>
+<p><img alt="Graphical user interface, text, application Description automatically
+generated" src="../media/image46.png" /></p>
+<p>Click on the url in the location ... and tada ... you should see the
+Cloud Pak for Data console pop up.</p>
+<p><img alt="Graphical user interface, application Description automatically
+generated" src="../media/image47.png" /></p>
+<p>You can log into Cloud Pak for Data with the default username = admin
+and password=password.</p>
+<p>Congratulations, you can now start using CloudPak for Data.</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../media/image48.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56a63758.min.js"></script>
+      
+    
+  </body>
+</html>
