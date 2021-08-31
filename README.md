@@ -8,7 +8,7 @@ With over 200 services available in IBM Cloud Catalog you can develop virtual an
 # *NEW* - Deploy to IBM Cloud Satellite Tutorial
 Learn how to create a satellite location to run your OpenShift Cluster.  This tutorial series can be used either as a stand-alone series to just learn about IBM Cloud Satellite OR ... can be used in conjunction with the main tutorial below.
 
-[Satellite Tutorial Series](https://github.com/kmcolli/satellite) 
+[Satellite Tutorial Series](https://kmcolli.github.io/satellite/) 
 
 
 ## Resources
